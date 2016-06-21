@@ -15,6 +15,7 @@
         <nav> <asp:HyperLink runat="server" NavigateUrl="~/TipodeHabitacion.aspx"></asp:HyperLink></nav>
         <nav> <asp:HyperLink runat="server" NavigateUrl="~/Estadia.aspx"></asp:HyperLink></nav>
         <nav> <asp:HyperLink runat="server" NavigateUrl="~/Hotel.aspxx"></asp:HyperLink></nav>
+         <nav> <asp:HyperLink runat="server" NavigateUrl="~/Contactenos.aspxx"></asp:HyperLink></nav>
 
         <nav class="navbar navbar-defecto">
             <div class="container-fluid">
@@ -37,6 +38,7 @@
                         <li><a href="TipodeHabitacion.aspx">Tipo de Habitaciones</a></li>
                         <li><a href="Estadia.aspx">Estadia</a></li>
                               <li><a href="Hotel.aspx">Hoteles</a></li>
+                         <li><a href="Contactenos.aspx">Contactenos</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
