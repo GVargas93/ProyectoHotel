@@ -21,8 +21,8 @@ public partial class Contactenos : System.Web.UI.Page
         { 
 
         MailMessage msg = new MailMessage();
-        msg.From = new MailAddress("ja.clavijo95@gmail.com");
-        msg.To.Add("ja.clavijo95@gmail.com");
+        msg.From = new MailAddress("hotelnur2016@gmail.com");
+        msg.To.Add("hotelnur2016@gmail.com");
         msg.Subject = "hoteleria";
         msg.Body = "<b> Sender Name:</b> " + Nombre.Text + "<br/>"
          + "<b/> Enviar Correo: </b> " + Correo.Text + "<br/>"
@@ -31,7 +31,7 @@ public partial class Contactenos : System.Web.UI.Page
 
         SmtpClient clinent = new SmtpClient("smtp.gmail.com",587);
         clinent.EnableSsl = true;
-        clinent.Credentials= new System.Net.NetworkCredential("ja.clavijo95@gmail.com", "JoseloCortizona01");
+        clinent.Credentials= new System.Net.NetworkCredential("hotelnur2016@gmail.com", "123456789jose");
         clinent.Send(msg);
 
         lbmensaje.ForeColor = System.Drawing.Color.Blue;
