@@ -8,18 +8,33 @@ using System.Web;
 /// </summary>
 public class tblHabitacion
 {
-	public tblHabitacion()
-	{
-		//
-		// TODO: Agregar aquí la lógica del constructor
-		//
-	}
+    public tblHabitacion()
+    {
+        //
+        // TODO: Agregar aquí la lógica del constructor
+        //
+    }
 
     public int HabitacionID { get; set; }
 
     public int NumeroHabitacion { get; set; }
 
     public bool Estado { get; set; }
+
+    public string EstadoForDisplay
+    {
+        get
+        {
+            if (Estado) 
+            {
+                return "Disponible";
+            }
+            else
+            {
+                return "No Disponible";
+            }
+        }
+    }
 
     public int Costo { get; set; }
 
