@@ -1,14 +1,14 @@
 USE DB_Hotel
 GO
 
-IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_SelectAllTipoHabitaciones' AND user_name(uid) = 'dbo')
-	DROP PROCEDURE [dbo].sp_SelectAllTipoHabitaciones
+IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_SelectAllTipoHabitacion' AND user_name(uid) = 'dbo')
+	DROP PROCEDURE [dbo].sp_SelectAllTipoHabitacion
 GO
 
-CREATE PROCEDURE [dbo].sp_SelectAllTipoHabitaciones
+CREATE PROCEDURE [dbo].sp_SelectAllTipoHabitacion
 AS
 	SET NOCOUNT ON;
-SELECT        lTipoHabitacion_iD, sDescripcion, sNombre
+SELECT        lTipoHabitacion_iD, sNombre, sDescripcion
 FROM            Tbl_TipoHabitacion
 GO
 
@@ -18,14 +18,14 @@ GO
 
 CREATE PROCEDURE [dbo].sp_InsertTipoHabitacion
 (
-	@sDescripcion varchar(50),
-	@sNombre varchar(50)
+	@sNombre varchar(50),
+	@sDescripcion varchar(50)
 )
 AS
 	SET NOCOUNT OFF;
-INSERT INTO [Tbl_TipoHabitacion] ([sDescripcion], [sNombre]) VALUES (@sDescripcion, @sNombre);
+INSERT INTO [Tbl_TipoHabitacion] ([sNombre], [sDescripcion]) VALUES (@sNombre, @sDescripcion);
 	
-SELECT lTipoHabitacion_iD, sDescripcion, sNombre FROM Tbl_TipoHabitacion WHERE (lTipoHabitacion_iD = SCOPE_IDENTITY())
+SELECT lTipoHabitacion_iD, sNombre, sDescripcion FROM Tbl_TipoHabitacion WHERE (lTipoHabitacion_iD = SCOPE_IDENTITY())
 GO
 
 IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_UpdateTipoHabitacion' AND user_name(uid) = 'dbo')
@@ -34,16 +34,16 @@ GO
 
 CREATE PROCEDURE [dbo].sp_UpdateTipoHabitacion
 (
-	@sDescripcion varchar(50),
 	@sNombre varchar(50),
+	@sDescripcion varchar(50),
 	@Original_lTipoHabitacion_iD int,
 	@lTipoHabitacion_iD int
 )
 AS
 	SET NOCOUNT OFF;
-UPDATE [Tbl_TipoHabitacion] SET [sDescripcion] = @sDescripcion, [sNombre] = @sNombre WHERE (([lTipoHabitacion_iD] = @Original_lTipoHabitacion_iD));
+UPDATE [Tbl_TipoHabitacion] SET [sNombre] = @sNombre, [sDescripcion] = @sDescripcion WHERE (([lTipoHabitacion_iD] = @Original_lTipoHabitacion_iD));
 	
-SELECT lTipoHabitacion_iD, sDescripcion, sNombre FROM Tbl_TipoHabitacion WHERE (lTipoHabitacion_iD = @lTipoHabitacion_iD)
+SELECT lTipoHabitacion_iD, sNombre, sDescripcion FROM Tbl_TipoHabitacion WHERE (lTipoHabitacion_iD = @lTipoHabitacion_iD)
 GO
 
 IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_DeleteTipoHabitacion' AND user_name(uid) = 'dbo')
@@ -59,17 +59,17 @@ AS
 DELETE FROM [Tbl_TipoHabitacion] WHERE (([lTipoHabitacion_iD] = @Original_lTipoHabitacion_iD))
 GO
 
-IF EXISTS (SELECT * FROM sysobjects WHERE name = 'SelectTipoHabitacionById' AND user_name(uid) = 'dbo')
-	DROP PROCEDURE [dbo].SelectTipoHabitacionById
+IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_SelectTipoHabitacionById' AND user_name(uid) = 'dbo')
+	DROP PROCEDURE [dbo].sp_SelectTipoHabitacionById
 GO
 
-CREATE PROCEDURE [dbo].SelectTipoHabitacionById
+CREATE PROCEDURE [dbo].sp_SelectTipoHabitacionById
 (
 	@lTipoHabitacion_iD int
 )
 AS
 	SET NOCOUNT ON;
-SELECT        lTipoHabitacion_iD, sDescripcion, sNombre
+SELECT        lTipoHabitacion_iD, sNombre, sDescripcion
 FROM            Tbl_TipoHabitacion
 WHERE        (lTipoHabitacion_iD = @lTipoHabitacion_iD)
 GO
@@ -81,7 +81,7 @@ GO
 CREATE PROCEDURE [dbo].sp_SelectAllHabitaciones
 AS
 	SET NOCOUNT ON;
-SELECT        lHabitacion_iD, lTipoHabitacion_iD_FK, sDescripcion, lCosto, bEstado, lNumeroHabitacion
+SELECT        lHabitacion_iD, lNumeroHabitacion, bEstado, lCosto, sDescripcion, lTipoHabitacion_iD_FK
 FROM            Tbl_Habitacion
 GO
 
@@ -91,17 +91,17 @@ GO
 
 CREATE PROCEDURE [dbo].sp_InsertHabitacion
 (
-	@lTipoHabitacion_iD_FK int,
-	@sDescripcion varchar(250),
-	@lCosto int,
+	@lNumeroHabitacion int,
 	@bEstado bit,
-	@lNumeroHabitacion int
+	@lCosto int,
+	@sDescripcion varchar(250),
+	@lTipoHabitacion_iD_FK int
 )
 AS
 	SET NOCOUNT OFF;
-INSERT INTO [Tbl_Habitacion] ([lTipoHabitacion_iD_FK], [sDescripcion], [lCosto], [bEstado], [lNumeroHabitacion]) VALUES (@lTipoHabitacion_iD_FK, @sDescripcion, @lCosto, @bEstado, @lNumeroHabitacion);
+INSERT INTO [Tbl_Habitacion] ([lNumeroHabitacion], [bEstado], [lCosto], [sDescripcion], [lTipoHabitacion_iD_FK]) VALUES (@lNumeroHabitacion, @bEstado, @lCosto, @sDescripcion, @lTipoHabitacion_iD_FK);
 	
-SELECT lHabitacion_iD, lTipoHabitacion_iD_FK, sDescripcion, lCosto, bEstado, lNumeroHabitacion FROM Tbl_Habitacion WHERE (lHabitacion_iD = SCOPE_IDENTITY())
+SELECT lHabitacion_iD, lNumeroHabitacion, bEstado, lCosto, sDescripcion, lTipoHabitacion_iD_FK FROM Tbl_Habitacion WHERE (lHabitacion_iD = SCOPE_IDENTITY())
 GO
 
 IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_UpdateHabitacion' AND user_name(uid) = 'dbo')
@@ -110,19 +110,19 @@ GO
 
 CREATE PROCEDURE [dbo].sp_UpdateHabitacion
 (
-	@lTipoHabitacion_iD_FK int,
-	@sDescripcion varchar(250),
-	@lCosto int,
-	@bEstado bit,
 	@lNumeroHabitacion int,
+	@bEstado bit,
+	@lCosto int,
+	@sDescripcion varchar(250),
+	@lTipoHabitacion_iD_FK int,
 	@Original_lHabitacion_iD int,
 	@lHabitacion_iD int
 )
 AS
 	SET NOCOUNT OFF;
-UPDATE [Tbl_Habitacion] SET [lTipoHabitacion_iD_FK] = @lTipoHabitacion_iD_FK, [sDescripcion] = @sDescripcion, [lCosto] = @lCosto, [bEstado] = @bEstado, [lNumeroHabitacion] = @lNumeroHabitacion WHERE (([lHabitacion_iD] = @Original_lHabitacion_iD));
+UPDATE [Tbl_Habitacion] SET [lNumeroHabitacion] = @lNumeroHabitacion, [bEstado] = @bEstado, [lCosto] = @lCosto, [sDescripcion] = @sDescripcion, [lTipoHabitacion_iD_FK] = @lTipoHabitacion_iD_FK WHERE (([lHabitacion_iD] = @Original_lHabitacion_iD));
 	
-SELECT lHabitacion_iD, lTipoHabitacion_iD_FK, sDescripcion, lCosto, bEstado, lNumeroHabitacion FROM Tbl_Habitacion WHERE (lHabitacion_iD = @lHabitacion_iD)
+SELECT lHabitacion_iD, lNumeroHabitacion, bEstado, lCosto, sDescripcion, lTipoHabitacion_iD_FK FROM Tbl_Habitacion WHERE (lHabitacion_iD = @lHabitacion_iD)
 GO
 
 IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_DeleteHabitacion' AND user_name(uid) = 'dbo')
@@ -138,20 +138,19 @@ AS
 DELETE FROM [Tbl_Habitacion] WHERE (([lHabitacion_iD] = @Original_lHabitacion_iD))
 GO
 
-IF EXISTS (SELECT * FROM sysobjects WHERE name = 'SelectHabitacionById' AND user_name(uid) = 'dbo')
-	DROP PROCEDURE [dbo].SelectHabitacionById
+IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_SelectHabitacionById' AND user_name(uid) = 'dbo')
+	DROP PROCEDURE [dbo].sp_SelectHabitacionById
 GO
 
-CREATE PROCEDURE [dbo].SelectHabitacionById
+CREATE PROCEDURE [dbo].sp_SelectHabitacionById
 (
 	@lHabitacion_iD int
 )
 AS
 	SET NOCOUNT ON;
-SELECT        lHabitacion_iD, lTipoHabitacion_iD_FK, sDescripcion, lCosto, bEstado, lNumeroHabitacion
+SELECT        lHabitacion_iD, lNumeroHabitacion, bEstado, lCosto, sDescripcion, lTipoHabitacion_iD_FK
 FROM            Tbl_Habitacion
 WHERE        (lHabitacion_iD = @lHabitacion_iD)
 GO
-
 
 

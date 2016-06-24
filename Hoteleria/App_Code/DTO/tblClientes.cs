@@ -27,6 +27,6 @@ public class tblClientes
 
     public string Documento { get; set; }
 
-    public int NacionalidadFK { get; set; }
+    public string Pais { get; set; }
 
 }

@@ -1,18 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraAdministrador.master" AutoEventWireup="true" CodeFile="RegistroCliente.aspx.cs" Inherits="RegistroCliente" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-       <section class="row">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <section class="row">
         <div class="col-md-6">
-                        <asp:Panel ID="ErrorPanel" runat="server" Visible="false"
+            <asp:Panel ID="ErrorPanel" runat="server" Visible="false"
                 CssClass="alert alert-danger" role="alert">
                 Error al Guardar el tipo de Habitacion
             </asp:Panel>
 
-
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <div class="form-group">
-                <label>nombre</label>
+                <label>Nombre</label>
                 <asp:TextBox ID="nombreTextBox" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="nombreTextBox"
@@ -34,7 +38,7 @@
                     ErrorMessage="Debe ingresar el apellido">
                 </asp:RequiredFieldValidator>
             </div>
-            
+
             <div class="form-group">
                 <label>Direccion</label>
                 <asp:TextBox ID="Direccion" runat="server" CssClass="form-control"></asp:TextBox>
@@ -48,7 +52,7 @@
             </div>
 
             <div class="form-group">
-                <label>descripcion</label>
+                <label>Telefono</label>
                 <asp:TextBox ID="Telefono" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="Telefono"
@@ -58,7 +62,7 @@
                     ErrorMessage="Debe ingresar el Telefono ">
                 </asp:RequiredFieldValidator>
             </div>
-            
+
             <div class="form-group">
                 <label>Documentacion</label>
                 <asp:TextBox ID="Documentacion" runat="server" CssClass="form-control"></asp:TextBox>
@@ -68,21 +72,13 @@
                     ForeColor="Red"
                     ValidationGroup="tblClientes"
                     ErrorMessage="Debe ingresar el Documentacion">
-                     </asp:RequiredFieldValidator>
+                </asp:RequiredFieldValidator>
             </div>
-<div>
-
-    <asp:label runat="server" text="Nacionalidad"></asp:label>
-    <asp:dropdownlist runat="server" Height="16px" Width="148px" DataSourceID="SqlDataSource1" DataTextField="sNacionalidad" DataValueField="sNacionalidad"></asp:dropdownlist>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_HotelConnectionString %>" SelectCommand="   select distinct [sNacionalidad]   FROM [DB_Hotel].[dbo].[Tbl_Nacionalidad]"></asp:SqlDataSource>
-</div>
-
-<div>
-
-    <asp:label runat="server" text="Ciudad "></asp:label>
-    <asp:dropdownlist runat="server" Height="16px" Width="145px" DataSourceID="SqlDataSource2" DataTextField="sPais" DataValueField="sPais" style="margin-left: 0px"></asp:dropdownlist>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DB_HotelConnectionString %>" SelectCommand="  select  [sPais]  FROM [DB_Hotel].[dbo].[Tbl_Nacionalidad] where [sNacionalidad]=[sNacionalidad];"></asp:SqlDataSource>
-</div>
+            <div class="form-group">
+                <label>Pais</label><br />
+                <asp:DropDownList id="Paises" runat="server" CssClass="form-control" ></asp:DropDownList>
+                
+            </div>
 
             <br />
 
@@ -101,7 +97,7 @@
             <asp:HiddenField ID="TipoHabitacionIdHiddenField" runat="server"
                 Value="0" />
 
-               </div>
+        </div>
     </section>
 </asp:Content>
 

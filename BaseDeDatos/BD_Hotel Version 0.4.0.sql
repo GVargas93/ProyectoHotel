@@ -33,6 +33,6 @@ PRINT 'FIN CREACION DE ESQUEMAS'
 GO
 ------------------------------------- Soy Una Barra Separadora :) ----------------------------------------
 ALTER TABLE [dbo].[Tbl_Reserva] 
-ADD CONSTRAINT FK_Tbl_ReservaCliente foreign key(lCliente_iD_FK) references [dbo].[Tbl_Cliente](lCliente_iD)
+ADD CONSTRAINT FK_Tbl_ReservaCliente foreign key(lCliente_iD_FK) references [dbo].[Tbl_Cliente](lCliente_iD),
 ALTER TABLE [dbo].[Tbl_Reserva] 
 CONSTRAINT FK_Tbl_ReservaHabitacion foreign key(lHabitacion_iD_FK) references [dbo].[Tbl_Habitacion](lHabitacion_iD)
