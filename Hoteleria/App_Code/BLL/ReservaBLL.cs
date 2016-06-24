@@ -57,13 +57,13 @@ public class ReservaBLL
     public static void Insert(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int EstadoFK)
     {
         tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
-        ReservaAdapter.Insert(EstadoFK, ClienteFK, HabitacionFK, Observacion, CostoTotal, FechaSalida, FechaEntrada);
+        ReservaAdapter.Insert(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, EstadoFK);
     }
 
     public static void Update(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int EstadoFK, int ReservaID)
     {
         tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
-        ReservaAdapter.Update(EstadoFK, ClienteFK, HabitacionFK, Observacion, CostoTotal, FechaSalida, FechaEntrada, ReservaID);
+        ReservaAdapter.Update(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, EstadoFK, ReservaID);
     }
 
     public static void Delete(int Reserva_ID)

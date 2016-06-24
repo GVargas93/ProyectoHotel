@@ -37,7 +37,7 @@ public class ClienteBLL
         objCliente.Direccion = row.sDireccion;
         objCliente.Telefono = row.sTelefono;
         objCliente.Documento = row.sDocumento;
-        objCliente.NacionalidadFK = row.lNacionalidad_iD_FK;
+        objCliente.Pais = row.sPais;
         return objCliente;
     }
 
@@ -53,16 +53,16 @@ public class ClienteBLL
 
     }
 
-    public static void Insert(string Nombre, string Apellido, string Direccion, string Telefono, string Documento, int NacionalidadFK)
+    public static void Insert(string Nombre, string Apellido, string Direccion, string Telefono, string Documento, string Pais)
     {
         tblClientesDSTableAdapters.Tbl_ClienteTableAdapter clienteAdapter = new tblClientesDSTableAdapters.Tbl_ClienteTableAdapter();
-        clienteAdapter.Insert(NacionalidadFK, Documento, Telefono, Direccion, Apellido, Nombre);
+        clienteAdapter.Insert(Nombre, Apellido, Direccion, Telefono, Documento, Pais);
     }
 
-    public static void Update(string Nombre, string Apellido, string Direccion, string Telefono, string Documento, int NacionalidadFK, int ClienteID)
+    public static void Update(string Nombre, string Apellido, string Direccion, string Telefono, string Documento, string Pais, int ClienteID)
     {
         tblClientesDSTableAdapters.Tbl_ClienteTableAdapter clienteAdapter = new tblClientesDSTableAdapters.Tbl_ClienteTableAdapter();
-        clienteAdapter.Update(NacionalidadFK, Documento, Telefono, Direccion, Apellido, Nombre, ClienteID);
+        clienteAdapter.Update(Nombre, Apellido, Direccion, Telefono, Documento, Pais, ClienteID);
     }
 
     public static void Delete(int ClienteID)

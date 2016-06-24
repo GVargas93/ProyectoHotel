@@ -54,13 +54,13 @@ public class HabitacionBLL
     public static void Insert(int NumeroHabitacion, bool Estado, int Costo, string Descripcion, int TipoHabitacionFK)
     {
         tblHabitacionDSTableAdapters.Tbl_HabitacionTableAdapter habitacionAdapter = new tblHabitacionDSTableAdapters.Tbl_HabitacionTableAdapter();
-        habitacionAdapter.Insert(TipoHabitacionFK, Descripcion, Costo, Estado, NumeroHabitacion);
+        habitacionAdapter.Insert(NumeroHabitacion, Estado, Costo, Descripcion, TipoHabitacionFK);
     }
 
     public static void Update(int NumeroHabitacion, bool Estado, int Costo, string Descripcion, int TipoHabitacionFK, int HabitacionID)
     {
         tblHabitacionDSTableAdapters.Tbl_HabitacionTableAdapter habitacionAdapter = new tblHabitacionDSTableAdapters.Tbl_HabitacionTableAdapter();
-        habitacionAdapter.Update(TipoHabitacionFK, Descripcion, Costo, Estado, NumeroHabitacion, HabitacionID);
+        habitacionAdapter.Update(NumeroHabitacion, Estado, Costo, Descripcion, TipoHabitacionFK, HabitacionID);
     }
 
     public static void Delete(int HabitacionID)

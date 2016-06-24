@@ -51,13 +51,13 @@ public class TipoHabitacionBLL
     public static void Insert(string Nombre, string Descripcion)
     {
         tblTipoHabitacionDSTableAdapters.Tbl_TipoHabitacionTableAdapter tipoHabitacionAdapter = new tblTipoHabitacionDSTableAdapters.Tbl_TipoHabitacionTableAdapter();
-        tipoHabitacionAdapter.Insert(Descripcion, Nombre);
+        tipoHabitacionAdapter.Insert(Nombre, Descripcion);
     }
 
     public static void Update(string Nombre, string Descripcion, int TipoHabitacionID)
     {
         tblTipoHabitacionDSTableAdapters.Tbl_TipoHabitacionTableAdapter tipoHabitacionAdapter = new tblTipoHabitacionDSTableAdapters.Tbl_TipoHabitacionTableAdapter();
-        tipoHabitacionAdapter.Update(Descripcion, Nombre, TipoHabitacionID);
+        tipoHabitacionAdapter.Update(Nombre, Descripcion, TipoHabitacionID);
     }
 
     public static void Delete(int TipoHabitacionID)
