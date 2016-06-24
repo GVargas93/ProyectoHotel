@@ -1,70 +1,67 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Contactenos.aspx.cs" Inherits="Contactenos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraCliente.master" AutoEventWireup="true" CodeFile="Contactenos.aspx.cs" Inherits="Contactenos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <style type="text/css">
-        .form-control {}
-    </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="content" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
     <section class="row">
         <div class="col-md-6" itemid="u">
-            <asp:panel id="Error" runat="server" visible="false" cssclass="alert alert-danger" role="alert">
-            </asp:panel>
+            <asp:Panel ID="Error" runat="server" Visible="false" CssClass="alert alert-danger" role="alert">
+            </asp:Panel>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
-                   <div class="form-group">
-                <asp:label runat="server" text="Nombre"></asp:label>
-                <asp:textbox id="Nombre" runat="server"
-                    cssclass="form-control">
-    </asp:textbox>
-                <asp:requiredfieldvalidator runat="server"
-                    controltovalidate="Nombre"
-                    display="Dynamic"
-                    forecolor="Blue"
-                    validationgroup="Contactenos"
-                    errormessage="Debe ingresar el nombre del cliente">
-
-                 </asp:requiredfieldvalidator>
-
+            <div class="form-group">
+                <asp:Label runat="server" Text="Nombre"></asp:Label>
+                <asp:TextBox ID="Nombre" runat="server"
+                    CssClass="form-control">
+                </asp:TextBox>
+                <asp:RequiredFieldValidator runat="server"
+                    ControlToValidate="Nombre"
+                    Display="Dynamic"
+                    ForeColor="Blue"
+                    ValidationGroup="Contactenos"
+                    ErrorMessage="Debe ingresar el nombre del cliente">
+                </asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <asp:label runat="server" text="Correo"></asp:label>
-                <asp:textbox id="Correo" runat="server"
-                    cssclass="form-control">
-    </asp:textbox>
-                <asp:requiredfieldvalidator runat="server"
-                    controltovalidate="Correo"
-                    display="Dynamic"
-                    forecolor="Blue"
-                    validationgroup="Contactenos"
-                    errormessage="Debe ingresar el nombre del cliente">
-
-                 </asp:requiredfieldvalidator>
-
+                <asp:Label runat="server" Text="Correo"></asp:Label>
+                <asp:TextBox ID="Correo" runat="server"
+                    CssClass="form-control">
+                </asp:TextBox>
+                <asp:RequiredFieldValidator runat="server"
+                    ControlToValidate="Correo"
+                    Display="Dynamic"
+                    ForeColor="Blue"
+                    ValidationGroup="Contactenos"
+                    ErrorMessage="Debe ingresar el nombre del cliente">
+                </asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <asp:label runat="server" text="Comentario"></asp:label>
-                <asp:textbox id="Textbox1" runat="server"
-                    cssclass="form-control" Height="247px" Width="475px"></asp:textbox>
-
+                <asp:Label runat="server" Text="Comentario"></asp:Label>
+                <asp:TextBox ID="Textbox1" runat="server"
+                    CssClass="form-control" Height="247px" Width="475px"></asp:TextBox>
             </div>
             <div class="form-group">
-                &nbsp;</div>
+                &nbsp;
+            </div>
 
-            <asp:linkbutton id="botonguardar" runat="server"
-                cssclass="btn btn-primary"
-                validationgroup="Contactenos"
-                onclick="botonguardar_Click">
-                
+            <asp:LinkButton ID="botonguardar" runat="server"
+                CssClass="btn btn-primary"
+                ValidationGroup="Contactenos"
+                OnClick="botonguardar_Click">
                 Enviar
-       
-            </asp:linkbutton>
-         
+            </asp:LinkButton>
+
             <asp:Label ID="lbmensaje" runat="server" BackColor="White" ForeColor="Red"></asp:Label>
-         
+
         </div>
     </section>
-    
+
 </asp:Content>
 

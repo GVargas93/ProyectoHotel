@@ -1,0 +1,43 @@
+body{
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #222222;
+	color: black;
+}
+
+.center-content{
+	width: 976px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.frase{
+    color: #ffffff;
+    background-color: #ffb700;
+	font-size: 25px;
+	font-style: italic;
+	font-family:Lato;
+	font-size:22.16px;
+
+}
+
+
+
+
+.navbar-default {
+    background-color: #020202;
+    border-color: #000000;
+}
+
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #dcd9d9;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #f5f5f5;
+}
+
+.navbar-default .navbar-brand {
+    color: #dcd9d9;
+}

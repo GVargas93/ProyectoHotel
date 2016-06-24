@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Mail;
-using System.Web.UI.HtmlControls;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,7 +9,9 @@ using System.Web.UI.WebControls;
 public partial class Contactenos : System.Web.UI.Page
 {
 
-    protected void Page_Load(object sender, EventArgs e)
+
+
+ protected void Page_Load(object sender, EventArgs e)
     {
 
     }
@@ -32,7 +32,7 @@ public partial class Contactenos : System.Web.UI.Page
         SmtpClient clinent = new SmtpClient("smtp.gmail.com",587);
         clinent.EnableSsl = true;
         clinent.Credentials= new System.Net.NetworkCredential("hotelnur2016@gmail.com", "123456789jose");
-        clinent.Send(msg);
+                    clinent.Send(msg);
 
         lbmensaje.ForeColor = System.Drawing.Color.Blue;
             Nombre.Text = "";
@@ -47,16 +47,6 @@ public partial class Contactenos : System.Web.UI.Page
             lbmensaje.ForeColor = System.Drawing.Color.Blue;
             lbmensaje.ForeColor = System.Drawing.Color.Red;
             lbmensaje.Text = "hubo un error" + ex.Message;
-           
         }
-
-
-
-
-
-
-
-
     }
-
 }
