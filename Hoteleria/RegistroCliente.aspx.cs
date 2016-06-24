@@ -11,4 +11,8 @@ public partial class RegistroCliente : System.Web.UI.Page
     {
 
     }
+    protected void SaveButtonn_Click(object sender, EventArgs e)
+    {
+
+    }
 }
