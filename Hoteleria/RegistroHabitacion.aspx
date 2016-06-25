@@ -11,7 +11,7 @@
                 Error al Guardar el tipo de Habitacion
             </asp:panel>
 
-
+            <br /><br />
             <div class="form-group">
                 <label>Numero Habitacion</label>
                 <asp:textbox id="nombreTextBox" runat="server" cssclass="form-control"></asp:textbox>
@@ -28,8 +28,8 @@
                 <asp:label runat="server" ID="ddlestado" text="Estado"></asp:label>
                 <asp:DropDownList ID="DropDownList1" runat="server">
                     
-                    <asp:ListItem Text="Disponible" value="1"/>
-                    <asp:ListItem Text="No Disponible" value="0"/>
+                    <asp:ListItem Text="No Disponible" value="1"/>
+                    <asp:ListItem Text="Disponible" value="0"/>
 
                 </asp:DropDownList>
               
@@ -93,7 +93,7 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="NumeroHabitacion" HeaderText="Numero Habitacion" />
-                        <asp:BoundField DataField="Estado" HeaderText="Estado" />
+                        <asp:BoundField DataField="EstadoForDisplay" HeaderText="Estado" />
                         <asp:BoundField DataField="Costo" HeaderText="Costo" />
                         <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                         <asp:BoundField DataField="TipoHabitacionFK" HeaderText="Tipo Habitacion" />
