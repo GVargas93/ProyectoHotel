@@ -4,6 +4,40 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+
+<div id="contact" class="container">
+  <h3 class="text-center">Contactenos</h3>
+  <p class="text-center"><em>Envianos un Mensaje!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>HotelNur!!!.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Av. El Trompillo 2do Anillo entre René Moreno y Monseñor Santisteban Nro. 4432 </p>
+      <p><span class="glyphicon glyphicon-phone"></span>Teléfono: +591 71619342</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: hotelNur2016@mail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentenos..." rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
     <section class="row">
         <div class="col-md-6" itemid="u">
             <asp:Panel ID="Error" runat="server" Visible="false" CssClass="alert alert-danger" role="alert">
