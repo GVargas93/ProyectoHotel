@@ -67,7 +67,7 @@
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
-                        <li><a href="Ubicacion.aspx">Ubicacion</a></li>
+                        <li><a href="Gastronomia.aspx">Gastronomia</a></li>
                         <li><a href="Contactenos.aspx">Contactenos</a></li>
                     </ul>
                 </div>
