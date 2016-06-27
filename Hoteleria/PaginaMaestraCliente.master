@@ -14,9 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/fonts.css" /> <!-- letras -->
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/contactenos.css"/>  <!-- container -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" /> <!-- letras -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" /><!-- bootstrap bootstrap bootstrap -->
    <!-- <link rel="stylesheet" type="text/css" href="css/fechadet.css" />--> <!-- fecha -->
+
+
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

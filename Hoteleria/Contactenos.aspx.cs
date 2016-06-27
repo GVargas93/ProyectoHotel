@@ -24,9 +24,13 @@ public partial class Contactenos : System.Web.UI.Page
             msg.From = new MailAddress("hotelnur2016@gmail.com");
             msg.To.Add("hotelnur2016@gmail.com");
             msg.Subject = "hoteleria";
-            msg.Body = "<b> Sender Name:</b> " + Nombre.Text + "<br/>"
-             + "<b/> Enviar Correo: </b> " + Correo.Text + "<br/>"
-             + "<b> comentario</b> " + Textbox1.Text;
+            msg.Body = 
+            "<b> **************************************************************** </b> " + "<br/>" +
+            "<b> *******************  Nuevo Comentario ************************** </b> " + "<br/>" +
+            "<b> **************************************************************** </b> " + "<br/>" 
+            +"<b> Nombre del Cliente:</b> " + Nombre.Text + "<br/>"
+            + "<b/> Correo: </b> " + Correo.Text + "<br/>"
+            + "<b> comentario</b> " + comments.Text;
             msg.IsBodyHtml = true;
 
             SmtpClient clinent = new SmtpClient("smtp.gmail.com", 587);
@@ -34,11 +38,11 @@ public partial class Contactenos : System.Web.UI.Page
             clinent.Credentials = new System.Net.NetworkCredential("hotelnur2016@gmail.com", "123456789jose");
             clinent.Send(msg);
 
-            lbmensaje.ForeColor = System.Drawing.Color.Blue;
+            lbmensaje.ForeColor = System.Drawing.Color.Black;
             Nombre.Text = "";
-            Textbox1.Text = "";
+            comments.Text = "";
             Correo.Text = "";
-            lbmensaje.Text = " Gracias por contactarnos";
+            lbmensaje.Text = " Gracias por contactarnos.... Enseguida le llega un mensaje a su correo";
 
 
         }
