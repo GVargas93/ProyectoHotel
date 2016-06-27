@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraCliente.master" AutoEventWireup="true" CodeFile="HabitacionSimple.aspx.cs" Inherits="HabitacionSimple" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraCliente.master" AutoEventWireup="true" CodeFile="HabitacionTriple.aspx.cs" Inherits="HabitacionTriple" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
     <!-- ====================================   Menu       ============================================== -->
 <!-- ================================================================================================ -->
   <div class="">
@@ -17,7 +16,7 @@
             <br>
             <div class="container">
               <div class="col-lg-3"> 
-              <a href="HabitacionSimple.aspx" type="submit" class="btn btn-warning btn-block">Habitación Simple </a>
+               <a href="HabitacionSimple.aspx" type="submit" class="btn btn-warning btn-block">Habitación Simple </a>
               </div>
               <div class="col-lg-3"> 
               <a href="HabitacionDoble.aspx" type="submit" class="btn btn-warning btn-block">Habitación Doble </a>
@@ -55,7 +54,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="img/hSimple1.jpg" alt="New York" height="1200" >
+                  <img src="img/hTriple1.jpg" alt="New York" height="1200" >
                   <div class="carousel-caption">
                     <h3>UN POCO ACERCA DE NOSOTROS</h3>
                     <p>quipo profesional completamente equipado.
@@ -65,7 +64,7 @@
 
 
                 <div class="item">
-                  <img src="img/hSimple2.jpg" alt="Chicago" height="1200"  >
+                  <img src="img/hTriple2.jpg" alt="Chicago" height="1200"  >
                   <div class="carousel-caption">
                     <h3>Nuestro objetivo es destacar nuestra obra</h3>
                     <p>pero no sólo hacemos eso.</p>
@@ -73,22 +72,13 @@
                 </div>
               
                 <div class="item">
-                  <img src="img/hSimple3.jpg" alt="Chicago" height="1200"  >
+                  <img src="img/hTriple3.jpg" alt="Chicago" height="1200"  >
                   <div class="carousel-caption">
                     <h3>Heche un vistazo a lo que podemos hacer</h3>
                     <p>Por usted y su proyecto.</p>
                   </div>      
                 </div>
             
-                <div class="item">
-                    <img src="img/hSimple4.jpg" alt="Los Angeles" height="1200"  >
-                    <div class="carousel-caption">
-                      <h3>Construimos el futuro.</h3>
-                      <p>Llámenos hoy mismo. </p>
-                    </div>      
-                </div>
-            </div>
-
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -104,9 +94,9 @@
   </div>
 <!-- ====================================  Habitación Simple ======================================== -->
 <!-- ================================================================================================ -->
-<div id=" " class="colorNegro ">
+<div id=" " class="rojo ">
       <div class="container">
-              <h1>Habitación Simple</h1>
+              <h1>Habitación Triple</h1>
             <div class="row colorT  bordeando1">
                 <div class="col-lg-12 ">
                       <div class="container">
@@ -114,7 +104,7 @@
                               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12  ">
                                   <div class="form-group">
                                       <label></label>
-                                      <h1><i class="fa fa-user" aria-hidden="true"></i>2   <i class="fa fa-bed" aria-hidden="true"></i>1 </h1>
+                                      <h1><i class="fa fa-user" aria-hidden="true"></i>6   <i class="fa fa-bed" aria-hidden="true"></i>3 </h1>
                                       <label></label>
                                   </div>
                               </div>
@@ -143,7 +133,7 @@
 <br>
 <div class="container rojo">
   <h1>Información de la habitación </h1>
-  <label>Capacidad de niños: 1 niño de 0 a 2 años no pagan compartiendo la habitación con sus padres.</label>
+  <label>Capacidad de niños: 2 niños de 0 a 8 años no pagan compartiendo la habitación con sus padres.</label>
   <div class="row">
         <h3>Servicios</h3>
         <div class="col-lg-3  ">
@@ -168,8 +158,6 @@
         </div>
     </div>
 </div>
-
-
 
 </asp:Content>
 

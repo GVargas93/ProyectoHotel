@@ -238,16 +238,9 @@
           <br/>
           <img src="img/habitacion1.png" alt="habitacion simple" width="400" height="300"/>
           <br/>
-          <p><strong>Habitacion Simple</strong></p>
+          <p class="textoNegro">Habitacion Simple</p>
           <h2>$ 160</h2>
-
-          <p  class="textoNegro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
+          <a href="HabitacionSimple.aspx" type="submit" class="btn btn-default btn-block">Hacer Reserva </a>
         </div>
       </div>
 
@@ -256,15 +249,9 @@
           <br/>
           <img src="img/habitacion2.png" alt="habitacion doble" width="400" height="300"/>
           <br/>
-          <p><strong>Habitacion Doble</strong></p>
+          <p class="textoNegro">Habitacion Doble</p>
           <h2>$ 300</h2>
-          <p  class="textoNegro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
+          <a href="HabitacionDoble.aspx" type="submit" class="btn btn-default btn-block">Hacer Reserva </a>
         </div>
       </div>
 
@@ -273,16 +260,9 @@
           <br/>
           <img src="img/habitacion3.png" alt="Suite" width="400" height="300"/>
           <br/>
-          <p><strong>Suite</strong></p>
+          <p class="textoNegro">Habitacion Suite</p>
           <h2>$ 420</h2>
-
-           <p class="textoNegro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
+          <a href="HabitacionSuite.aspx" type="submit" class="btn btn-default btn-block">Hacer Reserva </a>
         </div>
       </div>
     </div>
@@ -300,7 +280,7 @@
             </div>            
             <div class="form-group" >
                 <div class="col-lg-3 col-md-6 text-center">
-                    <button href="Contactenos.aspx" type="submit" class="btn btn-warning btn-lg">CONTACTAR</button>
+                 <a href="Contactenos.aspx" type="submit" class="btn btn-warning btn-block">CONTACTAR</a>
                 </div>
             </div>
         </div>
