@@ -150,15 +150,14 @@
 <div style="height:30px;width:100%; background-color:black; color:white; " > 
 
   <div class="Container"> 
-  <div class="row">
-    <div class="col-lg-3 col-md-4 col-ms-12 col-xs-12"> www.hotel.nur</div>
-    <div class="col-lg-4 col-md-4 col-ms-12 col-xs-12"> Alvaro paso por Aqui</div>
-    <div class="col-lg-4 col-md-4 col-ms-12 col-xs-12">
-          <div> 
-              <p>Idioma <a href="#">Ingles</a> - <a href="#">Frances</a> - <a href="#">Español</a>                <a href="#">Iniciar Seccion Admin</a></p>
-        </div>
-    </div>
-  </div>
+      <div class="row">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> .www.hotelNur.nur</div>
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> Alvaro paso por Aqui</div>
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> <p>Idioma <a href="#">Ingles</a> - <a href="#">Español</a> </p> </div>
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> <a href="Loging.aspx">Iniciar Seccion Admin</a></div>
+         </div>
+      </div>
   </div>
 
 </div>
