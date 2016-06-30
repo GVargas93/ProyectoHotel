@@ -70,76 +70,87 @@
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="email" accesskey="E">E-mail <i class="fa fa-info-circle fa-lg"></i></label>
-                                <input id="email" name="email" type="text" class="form-control" placeholder="Escriba su email" onkeyup="validacion('email');"/>
+                                <input id="email" name="email" type="email" class="form-control" placeholder="email@email.com" required="required" />
                                 <span class="help-block"></span>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             </div>
                         </div>
 
-                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="habitacion" accesskey="E">Habitación <i class="fa fa-info-circle fa-lg"></i></label>
-                                <select id="habitacion" name="habitacion" class="form-control" onchange="validacion('habitacion');">
-                                    <option value="">seleccione</option>
+                                <br />
+<%--                                <select id="ciudad" name="ciudad" class="form-control" required>
+                                    <option value="">Seleccione uno</option>
                                     <option value="1">Simple</option>
                                     <option value="2">Doble</option>
-                                    <option value="3">suite</option>
-                                </select>
+                                    <option value="3">Triple</option>
+                                    <option value="4">Suite</option>
+                                </select>--%>
+                                <asp:DropDownList ID="habitacionescom" class="form-control warning" runat="server" >
+                                           <asp:ListItem Value="0">Seleccione uno</asp:ListItem>
+                                           <asp:ListItem Value="1">Simple</asp:ListItem>
+                                           <asp:ListItem Value="2">Doble</asp:ListItem>
+                                           <asp:ListItem Value="3">Triple</asp:ListItem>
+                                           <asp:ListItem Value="4">Suite</asp:ListItem>
+                                  </asp:DropDownList>
+                                <span class="help-block"></span>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+
+
+
+                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+                            <%--<div class="form-group">
+                               <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
+                               <input type="text" id="from" name="from" placeholder="mm/dd/yyyy" required="required"/> <span class="help-block warning"></span>
+                                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                            </div>--%>
                             <div class="form-group">
-                                <label for="from" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                                <asp:TextBox ID="Llegada" runat="server" class="form-control" placeholder="Fecha de Ingreso"> </asp:TextBox>
-                                <script type="text/javascript">
-                                    var picker = new Pikaday(
-                                        {
-                                            field: document.getElementById('<%= Llegada.ClientID %>'),
-                                            firstDay: 1,
-                                            minDate: new Date('2000-01-01'),
-                                            maxDate: new Date('2020-01-01'),
-                                            yearRange: [2000, 2020],
-                                            numberOfMonths: 1,
-                                            theme: 'dark-theme'
-                                        });
-                                </script>
+                               <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
+                               <input type="text" id="fechaInicio" name="fechaInicio" placeholder="mm/dd/yyyy" required="required"/> 
+<%--                               <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
                             </div>
                         </div>
 
+
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label for="to" accesskey="E">Fecha Fin <i class="fa fa-info-circle fa-lg"></i></label>
-                                <asp:TextBox ID="Salida" runat="server" class="form-control" placeholder="Fecha de Salida"> </asp:TextBox>
-                                <script type="text/javascript">
-                                    var picker = new Pikaday(
-                                        {
-                                            field: document.getElementById('<%= Salida.ClientID %>'),
-                                            firstDay: 1,
-                                            minDate: new Date('2000-01-01'),
-                                            maxDate: new Date('2020-01-01'),
-                                            yearRange: [2000, 2020],
-                                            numberOfMonths: 1,
-                                            theme: 'dark-theme'
-                                        });
-                                </script>
-                            </div>
+                           <%-- <div class="form-group">
+                                <label for="fecha2" accesskey="E">Fecha Fin <i class="fa fa-info-circle fa-lg"></i></label>
+                               <input type="text" id="to" name="to" placeholder="mm/dd/yyyy" required="required"/> <span class="help-block"></span>
+                                <i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>--%>
+                                <div class="form-group">
+                                   <label for="fecha2" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
+                                   <input type="text" id="fechaFin" name="fechaFin" placeholder="mm/dd/yyyy" required="required"/>
+<%--                                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
+                                </div>
                         </div>
 
                         <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
                             <div class="form-group">
                                 <label for="persona" accesskey="E">Persona  </label>
-
-                                <input id="persona" name="persona" type="text" class="form-control" placeholder="#" onkeyup="validacion('persona');" aria-describedby="inputSuccess2Status">
+                                <select id="ciudad" name="ciudad" class="form-control" required="required">
+                                    <option value="">-----</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
                                 <span class="help-block"></span>
                                 <i class="fa fa-user infield"></i>
                             </div>
                         </div>
 
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                            <label></label>
-                            <button type="submit" class="btn btn-warning btn-block">Reservar ahora</button>
+                            <br />
+                           <asp:Button ID="BotonReserva" runat="server" Text="Reservar" class="btn btn-warning btn-block" onclick="BotonReserva_Click" />
+                             <br />
                         </div>
-
                     </div>
                 </div>
             </div>
