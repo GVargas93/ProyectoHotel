@@ -94,41 +94,19 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+
+                         <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                             <div class="form-group">
-                                <label for="from" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                                <asp:TextBox ID="Llegada" runat="server" class="form-control" placeholder="Fecha de Ingreso"> </asp:TextBox>
-                                <script type="text/javascript">
-                                    var picker = new Pikaday(
-                                        {
-                                            field: document.getElementById('<%= Llegada.ClientID %>'),
-                                            firstDay: 1,
-                                            minDate: new Date('2000-01-01'),
-                                            maxDate: new Date('2020-01-01'),
-                                            yearRange: [2000, 2020],
-                                            numberOfMonths: 1,
-                                            theme: 'dark-theme'
-                                        });
-                                </script>
+                                <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
+                               <input type="text" id="from" name="from" required/> <span class="help-block"></span>
                             </div>
                         </div>
 
+
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <div class="form-group">
-                                <label for="to" accesskey="E">Fecha Fin <i class="fa fa-info-circle fa-lg"></i></label>
-                                <asp:TextBox ID="Salida" runat="server" class="form-control" placeholder="Fecha de Salida"> </asp:TextBox>
-                                <script type="text/javascript">
-                                    var picker = new Pikaday(
-                                        {
-                                            field: document.getElementById('<%= Salida.ClientID %>'),
-                                            firstDay: 1,
-                                            minDate: new Date('2000-01-01'),
-                                            maxDate: new Date('2020-01-01'),
-                                            yearRange: [2000, 2020],
-                                            numberOfMonths: 1,
-                                            theme: 'dark-theme'
-                                        });
-                                </script>
+                                <label for="fecha2" accesskey="E">Fecha Fin <i class="fa fa-info-circle fa-lg"></i></label>
+                               <input type="text" id="to" name="to" required/> <span class="help-block"></span>
                             </div>
                         </div>
 
