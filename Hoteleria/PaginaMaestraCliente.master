@@ -11,18 +11,19 @@
     <meta name="keywords" content="footer, address, phone, icons" />
 
     <title>Hotel nur</title>
-
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css"/><!-- siempre al principio la fecha -->
 
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>  <!-- bootstrap 1 -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>  <!-- bootstrap 2 -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" /> <!-- container 1 -->
-    <link rel="stylesheet" type="text/css" href="css/contactenos.css"/>  <!-- container 2-->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css.map"/>  <!-- bootstrap 3 -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css.map"/>  <!-- bootstrap 4 -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/contactenos.css"/>  <!-- container -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" /> <!-- letras -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /><!-- bootstrap bootstrap bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/><!-- letras 1 -->
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" /> <!-- letras 2-->
-
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" /> <!-- letras -->
+    <link rel="stylesheet" href="css/pikaday.css"><!-- fecha cachorro -->
+    <link rel="stylesheet" href="css/site.css"><!-- fecha cachorro -->
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -164,27 +165,56 @@
     <!-- ===================================== footer fin ========================================== -->
     <!-- =========================================================================================== -->
 
+
+
 <script src="js/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!-- googleMaps -->
-<script src="bootstrap/js/bootstrap.min.js"></script><!-- bootstrap -->
+<script src="js/bootstrap.min.js"></script><!-- bootstrap -->
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script><!-- fecha fecha fecha -->
 <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script><!-- fecha fecha fecha -->
 <script src="jquery.ui.datepicker-es.js"></script><!-- fecha fecha fecha -->
-<script>
-    $(function () {
-        $("#from").datepicker({
-            onClose: function (selectedDate) {
-                $("#to").datepicker("option", "minDate", selectedDate);
-            }
-        });
-        $("#to").datepicker({
-            onClose: function (selectedDate) {
-                $("#from").datepicker("option", "maxDate", selectedDate);
-            }
-        });
-    });
-</script><!-- fecha fecha fecha -->
 
+    <script>
+        $(function () {
+
+            $("#from").datepicker({
+                onClose: function (selectedDate) {
+                    $("#to").datepicker("option", "minDate", selectedDate);
+                }
+            });
+
+            $("#to").datepicker({
+                onClose: function (selectedDate) {
+                    $("#from").datepicker("option", "maxDate", selectedDate);
+                }
+            });
+
+        });
+    </script><!-- fecha fecha fecha -->
+    <!-- =========================================================================================== -->
+    <!-- =========================================================================================== -->
+    <script src="js/pikaday.js"></script>
+        <script>
+            var picker = new Pikaday(
+            {
+                field: document.getElementById('fechaInicio'),
+                firstDay: 1,
+                minDate: new Date(),
+                maxDate: new Date(2020, 12, 31),
+                yearRange: [2000, 2020]
+            });
+        </script><!-- fecha cachorro -->
+
+        <script>
+            var picker = new Pikaday(
+            {
+                field: document.getElementById('fechaFin'),
+                firstDay: 1,
+                minDate: new Date(),
+                maxDate: new Date(2020, 12, 31),
+                yearRange: [2000, 2020]
+            });
+        </script><!-- fecha cachorro -->
 </body>
 </html>
