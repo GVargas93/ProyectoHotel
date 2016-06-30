@@ -11,4 +11,6 @@ public partial class RegistroEstadias : System.Web.UI.Page
     {
 
     }
+
+    
 }

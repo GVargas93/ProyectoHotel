@@ -78,12 +78,19 @@
                         <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="habitacion" accesskey="E">Habitación <i class="fa fa-info-circle fa-lg"></i></label>
-                                <select id="habitacion" name="habitacion" class="form-control" onchange="validacion('habitacion');">
-                                    <option value="">seleccione</option>
-                                    <option value="1">Simple</option>
-                                    <option value="2">Doble</option>
-                                    <option value="3">suite</option>
-                                </select>
+                               
+                                  <asp:DropDownList ID="habitacionescom" runat="server">
+                                           <asp:ListItem Value="0">----</asp:ListItem>
+            <asp:ListItem Value="1">Simple</asp:ListItem>
+             <asp:ListItem Value="2">Doble</asp:ListItem>
+               <asp:ListItem Value="3">Triple</asp:ListItem>
+                                      <asp:ListItem Value="4">Suite</asp:ListItem>
+                                   <%-- <asp:ListItem Text="Simple" />
+                                    <asp:ListItem Text="Doble" />
+                                     <asp:ListItem Text="Triple" />
+                                      <asp:ListItem Text="suite" />--%>
+                                      
+                                </asp:DropDownList>
                             </div>
                         </div>
 
@@ -137,8 +144,10 @@
 
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <label></label>
-                            <button type="submit" class="btn btn-warning btn-block">Reservar ahora</button>
-                        </div>
+                            <asp:Button ID="Button1" runat="server" Text="Button" onclick="SaveButtonn_Click" />
+                        <%--<asp:Button id="SaveButtonn" runat="server" >Reservar ahora</asp:Button>--%>
+                      <%--<asp:Button id="SaveButtonn" runat="server" onclick="SaveButtonn_Click">Reservar ahora />--%>
+                             </div>
 
                     </div>
                 </div>
