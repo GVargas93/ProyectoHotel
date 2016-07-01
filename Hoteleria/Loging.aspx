@@ -11,37 +11,42 @@
     <br />
     <br />
     <br />
-
-    <br />
-    <br />
     <section class="container">
         <div class="row">
 
             <div class="col-lg-offset-4 col-lg-4">
                 <div class="wrapper ">
-                    <form class="form-signin">
+                    <div class="form-signin">
                         <h2 class="form-signin-heading">Iniciar Seccion</h2>
-                        <input type="text" class="form-control" name="username" placeholder="Usuario" required="" autofocus="" />
-                        <input type="password" class="form-control" name="password" placeholder="Contraseña" required="" />
+
+                        <asp:TextBox ID="UserName" CssClass="form-control" runat="server" placeholder="Usuario" required="" autofocus=""></asp:TextBox>
+                        <br />
+                        <asp:TextBox ID="Password" CssClass="form-control" runat="server" TextMode="Password" placeholder="Contraseña" required=""> </asp:TextBox>
+
                         <label class="checkbox">
-                            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe">
+                            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe" />
                             Recordar me
                         </label>
                         <div class="row">
+                            <div class="col-lg-6"><a href="Home.aspx" type="submit" class="btn btn-lg btn-danger btn-block">cancelar</a></div>
+
+
                             <div class="col-lg-6">
-                                <a href="HomeAdministrador.aspx" type="submit" class="btn btn-warning btn-block">Entrar</a>
-                            </div>
-                            <div class="col-lg-6">
-                                <a href="Home.aspx" type="submit" class="btn btn-warning btn-block">cancelar</a>
+                                <asp:Button ID="loginAdministrador" runat="server" Text="Entrar" CssClass="btn btn-lg btn-right  btn-block " OnClick="loginAdministrador_Click" />
                             </div>
 
                         </div>
+                        <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false"> Usuario Incorrecto, Intente de Nuevo</asp:Label>
 
-                        <br />
-                        Nuevo Usuario?   resgistrar
-                    </form>
+
+                        <br>
+                        Nuevo Usuario?
+                        <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/RegistroAdministrador.aspx">Registrate gratis</asp:LinkButton>
+
+                    </div>
                 </div>
             </div>
+
 
         </div>
     </section>
@@ -49,6 +54,18 @@
     <br />
     <br />
     <br />
-
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>
 
