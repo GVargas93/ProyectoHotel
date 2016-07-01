@@ -10,14 +10,20 @@ public partial class Habitaciones : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //if (!IsPostBack)
+        //{
+        //    Paises.DataSource = Pais();
+        //    Paises.DataBind();
+        //    Paises.Items.Insert(0, "Seleccione Pais..");
+        //}
     }
     protected void botonReservar_Click(object sender, EventArgs e)
     {
 
 
 
-
+        //tblClientes cliente = new tblClientes();
+        //ClienteBLL.Insert(nombreTextBox.Text, apellido.Text, Direccion.Text, Telefono.Text, Documentacion.Text, Paises.SelectedValue);
 
 
 
