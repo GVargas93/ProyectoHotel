@@ -59,22 +59,12 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="HabitacionSimple.aspx">Habitación Simple</a></li>
                                 <li><a href="HabitacionDoble.aspx">Habitación Doble</a></li>
+                                <li><a href="HabitacionTriple.aspx">Habitación triple</a></li>
                                 <li><a href="HabitacionSuite.aspx">Habitación Suite</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
-
-                        <li class="dropdown">
-                            <a href="Eventos.aspx" class="dropdown-toggle" data-toggle="dropdown">Eventos<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li role="separator" class="divider"></li>
-                                <li><a href="ESalonAuditorio.aspx">Salon Auditorio</a></li>
-                                <li><a href="EConvensiones.aspx">Convensiones</a></li>
-                                <li><a href="EReunionesSociales.aspx">Reuniones Sociales</a></li>
-                                <li><a href="EGaleria.aspx">Galeria</a></li>
-                                <li role="separator" class="divider"></li>
-                            </ul>
-                        </li>
+                        <li><a href="EReunionesSociales.aspx">Reuniones Sociales</a></li>
                         <li><a href="Gastronomia.aspx">Gastronomia</a></li>
                         <li><a href="Contactenos.aspx">Contactenos</a></li>
                     </ul>
@@ -110,8 +100,8 @@
     <div class="footer-left">
         <h3>Hotel<span>Nur</span></h3>
         <p class="footer-links">
-          <a href="Home.aspx">Inicio</a> · <a href="#">Sobre nosotros</a> · <a href="Habitacion.aspx">Habitaciones</a> · <a href="EReunionesSociales.aspx">Eventos</a>
-          · <a href="Contactenos.aspx">Comtactenos</a> · <a href="EGaleria.aspx">Galería</a> </p>
+          <a href="Home.aspx">Inicio</a> · <a href="Habitaciones.aspx">Habitaciones</a> · <a href="EReunionesSociales.aspx">Eventos</a>· <a href="Gastronomia.aspx">Gastronomia</a>
+          · <a href="Contactenos.aspx">Comtactenos</a> </p>
         <p class="footer-company-name">Estudiantes Nur &copy; 2016</p><br/>
         <p class="footer-company-name">Siguenos en</p>
         <div class="footer-icons">
