@@ -70,13 +70,13 @@
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="email" accesskey="E">E-mail <i class="fa fa-info-circle fa-lg"></i></label>
-                                <input id="email" name="email" type="email" class="form-control" placeholder="email@email.com" required="required" />
+                                <input id="email" name="email" type="email" class="form-control" placeholder="email@email.com" required=""   />
                                 <span class="help-block"></span>
                                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+                        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="habitacion" accesskey="E">Habitación <i class="fa fa-info-circle fa-lg"></i></label>
                                 <br />
@@ -88,7 +88,7 @@
                                     <option value="4">Suite</option>
                                 </select>--%>
                                 <asp:DropDownList ID="habitacionescom" class="form-control warning" runat="server" >
-                                           <asp:ListItem Value="0">Seleccione uno</asp:ListItem>
+                                           <asp:ListItem Value="0">Seleccione una Habitación</asp:ListItem>
                                            <asp:ListItem Value="1">Simple</asp:ListItem>
                                            <asp:ListItem Value="2">Doble</asp:ListItem>
                                            <asp:ListItem Value="3">Triple</asp:ListItem>
@@ -110,7 +110,7 @@
                             </div>--%>
                             <div class="form-group">
                                <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                               <input type="text" id="fechaInicio" name="fechaInicio" placeholder="mm/dd/yyyy" required="required"/> 
+                               <input type="text" id="fechaInicio" name="fechaInicio" placeholder="mm/dd/yyyy" required=""   /> 
 <%--                               <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                 <i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>--%>
                                 <div class="form-group">
                                    <label for="fecha2" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                                   <input type="text" id="fechaFin" name="fechaFin" placeholder="mm/dd/yyyy" required="required"/>
+                                   <input type="text" id="fechaFin" name="fechaFin" placeholder="mm/dd/yyyy" required=""   />
 <%--                                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
                                 </div>
                         </div>
@@ -146,10 +146,9 @@
                             </div>
                         </div>--%>
 
-                        <div class="col-lg-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <br />
                             <br />
-
                            <asp:Button ID="BotonReserva" runat="server" Text="Reservar" class="btn btn-warning btn-block" onclick="BotonReserva_Click" />
                              <br />
                         </div>
@@ -260,148 +259,10 @@
           </div>
     </div>
 </div>
-<!-- ==================================== Habitaciones =============================================== -->
-<!-- ================================================================================================ -->
-<div id="" class="">
-  <div class="container">
-      
-      <h3 class="text-center">TOUR DATES</h3>
-    <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
-    <ul class="list-group">
-      <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>
-      <li class="list-group-item">October <span class="label label-danger">Sold Out!</span></li>
-      <li class="list-group-item">November <span class="badge">3</span></li>
-    </ul>
-
-
-    <div class="row text-center">
-          <h3 class="text-center">Nuestras habitaciones</h3>
-
-      <div class="col-sm-4 col-lg-3" id="simple">
-        <div class="thumbnail">
-          <br/>
-          <img src="img/habitacion1.png" alt="habitacion simple" width="400" height="300"/>
-          <br/>
-          <p class="textoNegro">Habitacion Simple</p>
-          <h2>$ 160</h2>
-          <button class="btn pull-right btn-block " data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-lg-3" id="doble">
-        <div class="thumbnail">
-          <br/>
-          <img src="img/habitacion2.png" alt="habitacion doble" width="400" height="300"/>
-          <br/>
-          <p class="textoNegro">Habitacion Doble</p>
-          <h2>$ 300</h2>
-          <button class="btn pull-right btn-block " data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-lg-3" id="triple">
-        <div class="thumbnail">
-          <br/>
-          <img src="img/habitacion2.png" alt="habitacion doble" width="400" height="300"/>
-          <br/>
-          <p class="textoNegro">Habitacion Triple</p>
-          <h2>$ 300</h2>
-          <button class="btn pull-right btn-block " data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
-        </div>
-      </div>
-
-      <div class="col-sm-4 col-lg-3  " id="suite">
-        <div class="thumbnail">
-          <br/>
-          <img src="img/habitacion3.png" alt="Suite" width="400" height="300"/>
-          <br/>
-          <p class="textoNegro">Habitacion Suite</p>
-          <h2>$ 420</h2>
-          <button class="btn pull-right btn-block " data-toggle="modal" data-target="#myModal">Hacer Reserva</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-      <!-- Modal -->
-  <div class="modal fade " id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="fa fa-building" aria-hidden="true"></span> HotelNur</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-
-
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> E-mail</label>
-              <input type="email" class="form-control" id="usrname1" placeholder="  email@email.com">
-            </div>
-      
-              <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Habiatcion</label>
-              <input type="text" value="Simple" class="form-control" id="usrname2" >
-            </div>
-
-
-            <div class="form-group">
-                <label for="fecha2a" accesskey="E">Fecha Incio <i class="fa fa-calendar-check-o" aria-hidden="true"></i></label>
-                <input type="text" id="fechaInicio1" name="fechaFin" placeholder="mm/dd/yyyy" required="required"/>
-            </div>
-
-            <div class="form-group">
-                <label for="fecha2a" accesskey="E">Fecha Fin <i class="fa fa-calendar-check-o" aria-hidden="true"></i></label>
-                <input type="text" id="fechaFin1" name="fechaFin" placeholder="mm/dd/yyyy" required="required"/>
-            </div>
-
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-user"></span> Adultos</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-
-              <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-user"></span> Niños</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-
-             
-
-
-            
-
-
-              <button type="submit" class="btn btn-block">Reservar Ahora!.
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-
-
-
-
-
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
     <br />
     <br />
     <br />
     <br />
-
 <!-- ================================================================================================ -->
 <!-- ==================================== COntactenos =============================================== -->
 <section class="frase">
