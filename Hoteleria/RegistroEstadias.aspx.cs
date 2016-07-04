@@ -16,6 +16,6 @@ public partial class RegistroEstadias : System.Web.UI.Page
     protected void SaveButtonn_Click(object sender, EventArgs e)
     {
         tblReserva cliente = new tblReserva();
-        ReservaBLL.Insert(Convert.ToDateTime(Fecha_entrada.Text), apellido.Text, Direccion.Text, Telefono.Text, Documentacion.Text, Paises.SelectedValue);
+        ReservaBLL.Insert(Convert.ToDateTime(Fecha_entrada.Text), Convert.ToDateTime(Fecha_final.Text), Convert.ToInt32(txtCosto.Text), txtObservacion.Text, Convert.ToInt32(ddlHabitacion.SelectedValue), Convert.ToInt32(ddlCliente.SelectedValue), Convert.ToInt32(CantidadAdultos.Text), Convert.ToInt32(CantidadNinhos.Text));
     }
 }

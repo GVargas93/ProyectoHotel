@@ -12,7 +12,12 @@ GO
 
 ------------------------------------- Soy Una Barra Separadora :) ----------------------------------------
 
-DROP TABLE[dbo].[Tbl_Estado]
+ALTER TABLE [dbo].[Tbl_Reserva] DROP CONSTRAINT  FK_Tbl_ReservaEstado;
+
+DROP TABLE[dbo].[Tbl_Estado];
 
 
-ALTER TABLE [dbo].[Tbl_Reserva] DROP CONSTRAINT  FK_Tbl_ReservaEstado 
+
+
+ALTER TABLE [dbo].[Tbl_Reserva] 
+DROP COLUMN lEstado_iD_FK;

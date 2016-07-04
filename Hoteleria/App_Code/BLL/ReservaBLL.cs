@@ -37,7 +37,8 @@ public class ReservaBLL
         objReserva.Observacion = row.sObservacion;
         objReserva.HabitacionFK = row.lHabitacion_iD_FK;
         objReserva.ClienteFK = row.lCliente_iD_FK;
-        objReserva.EstadoFK = row.lEstado_iD_FK;
+        objReserva.CantidadAdultos = row.lCantidadAdultos;
+        objReserva.CantidadNinhos = row.lCantidadNinhos;
 
         return objReserva;
     }
@@ -54,16 +55,16 @@ public class ReservaBLL
 
     }
 
-    public static void Insert(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int EstadoFK)
+    public static void Insert(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int CantidadAdultos, int CantidadNinhos)
     {
         tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
-        ReservaAdapter.Insert(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, EstadoFK);
+        ReservaAdapter.Insert(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, CantidadAdultos, CantidadNinhos);
     }
 
-    public static void Update(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int EstadoFK, int ReservaID)
+    public static void Update(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int CantidadAdultos, int CantidadNinhos, int ReservaID)
     {
         tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
-        ReservaAdapter.Update(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, EstadoFK, ReservaID);
+        ReservaAdapter.Update(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, CantidadAdultos, CantidadNinhos, ReservaID);
     }
 
     public static void Delete(int Reserva_ID)

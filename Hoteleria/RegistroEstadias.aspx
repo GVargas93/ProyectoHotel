@@ -9,54 +9,58 @@
                 <asp:Label ID="lblFechaEntrada" runat="server" Text="Fecha de Entrada"></asp:Label>
             </div>
             <div>
-                <asp:Calendar ID="Fecha_entrada" runat="server"></asp:Calendar>
+                <asp:Calendar  runat="server"></asp:Calendar>
+                <asp:TextBox ID="Fecha_entrada" runat="server" />
             </div>
             <div>
                 <asp:Label ID="lblFechaSalida" runat="server" Text="Fecha Final"></asp:Label>
             </div>
             <div>
 
-                <asp:Calendar ID="Fecha_final" runat="server"></asp:Calendar>
+                <asp:Calendar  runat="server"></asp:Calendar>
+                <asp:TextBox ID="Fecha_final" runat="server" />
             </div>
             <div>
-                <asp:Label ID="Label3" runat="server" Text="Costo Total"></asp:Label>
+                <asp:Label ID="lblCosto" runat="server" Text="Costo Total"></asp:Label>
             </div>
             <div>
-                <asp:TextBox ID="Costo" CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtCosto" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="Label4" runat="server" Text="Observacion"></asp:Label>
+                <asp:Label ID="lblObservacion" runat="server" Text="Observacion"></asp:Label>
             </div>
             <div>
-                <asp:TextBox ID="Observacion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtObservacion" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="Label5" runat="server" Text="Habitacion"></asp:Label>
+                <asp:Label ID="lblHabitacion" runat="server" Text="Habitacion"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="Habitacion" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlHabitacion" runat="server" DataSourceID="sdsHabitacion1" DataTextField="sNombre" DataValueField="lTipoHabitacion_iD_FK"></asp:DropDownList>
+
+                <asp:SqlDataSource runat="server" ID="sdsHabitacion1" ConnectionString='<%$ ConnectionStrings:DB_HotelConnectionString %>' SelectCommand="SELECT Tbl_Habitacion.lHabitacion_iD, Tbl_Habitacion.lTipoHabitacion_iD_FK, Tbl_TipoHabitacion.lTipoHabitacion_iD, Tbl_TipoHabitacion.sNombre FROM Tbl_Habitacion INNER JOIN Tbl_TipoHabitacion ON Tbl_Habitacion.lTipoHabitacion_iD_FK = Tbl_TipoHabitacion.lTipoHabitacion_iD AND Tbl_Habitacion.lTipoHabitacion_iD_FK = Tbl_TipoHabitacion.sNombre WHERE (Tbl_Habitacion.lHabitacion_iD = Tbl_Habitacion.lTipoHabitacion_iD_FK)"></asp:SqlDataSource>
+            </div>
+            <div>
+                <asp:Label ID="lblAdultos" runat="server" Text="Cantidad Adulto"></asp:Label>
+            </div>
+            <div>
+                <asp:TextBox ID="CantidadAdultos" runat="server" placeholder="Cantidad Adultos"/>
 
             </div>
             <div>
-                <asp:Label ID="Label7" runat="server" Text="Adulto"></asp:Label>
+                <asp:Label ID="lblNinhos" runat="server" Text="Cantidad Niños"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                <asp:TextBox ID="CantidadNinhos" runat="server" placeholder="Cantidad Niños"/>
 
             </div>
             <div>
-                <asp:Label ID="Label8" runat="server" Text="Niños"></asp:Label>
+                <asp:Label ID="lblCliente" runat="server" Text="Cliente"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlCliente" runat="server" DataSourceID="sdsCliente" DataTextField="sNombre" DataValueField="lCliente_iD"></asp:DropDownList>
 
-            </div>
-            <div>
-                <asp:Label ID="Label6" runat="server" Text="Cliente"></asp:Label>
-            </div>
-            <div>
-                <asp:DropDownList ID="Cliente" runat="server"></asp:DropDownList>
-
+                <asp:SqlDataSource runat="server" ID="sdsCliente" ConnectionString='<%$ ConnectionStrings:DB_HotelConnectionString %>' SelectCommand="SELECT [lCliente_iD], [sNombre] FROM [Tbl_Cliente]"></asp:SqlDataSource>
             </div>
             <asp:LinkButton ID="SaveButtonn" runat="server"
                 CssClass="btn btn-primary"
