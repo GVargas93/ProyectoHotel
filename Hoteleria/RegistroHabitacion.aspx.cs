@@ -50,9 +50,10 @@ public partial class RegistroHabitacion : System.Web.UI.Page
             Direccion.Text = "";
 
         }
-        else {
+        else
+        {
             HabitacionBLL.Update(Convert.ToInt32(nombreTextBox.Text), estado, Convert.ToInt32(apellido.Text), Direccion.Text, Convert.ToInt32(tipo.SelectedValue), Convert.ToInt32(cliente_id));
-          
+
         }
         ClienteGridView.DataBind();
     }
