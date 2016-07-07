@@ -8,7 +8,15 @@ GO
 CREATE PROCEDURE [dbo].sp_SelectAllReservas
 AS
 	SET NOCOUNT ON;
+<<<<<<< HEAD
 SELECT        lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos
+=======
+<<<<<<< HEAD
+SELECT        lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos
+=======
+SELECT        lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lCantidadAdultos, lCantidadNinhos
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 FROM            Tbl_Reserva
 GO
 
@@ -24,15 +32,34 @@ CREATE PROCEDURE [dbo].sp_InsertReserva
 	@sObservacion varchar(250),
 	@lHabitacion_iD_FK int,
 	@lCliente_iD_FK int,
+<<<<<<< HEAD
 	@lEstado_iD_FK int,
+=======
+<<<<<<< HEAD
+	@lEstado_iD_FK int,
+=======
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 	@lCantidadAdultos int,
 	@lCantidadNinhos int
 )
 AS
 	SET NOCOUNT OFF;
+<<<<<<< HEAD
 INSERT INTO [Tbl_Reserva] ([dFechaEntrada], [dFechaSalida], [lCostoTotal], [sObservacion], [lHabitacion_iD_FK], [lCliente_iD_FK], [lEstado_iD_FK], [lCantidadAdultos], [lCantidadNinhos]) VALUES (@dFechaEntrada, @dFechaSalida, @lCostoTotal, @sObservacion, @lHabitacion_iD_FK, @lCliente_iD_FK, @lEstado_iD_FK, @lCantidadAdultos, @lCantidadNinhos);
 	
 SELECT lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos FROM Tbl_Reserva WHERE (lReserva_iD = SCOPE_IDENTITY())
+=======
+<<<<<<< HEAD
+INSERT INTO [Tbl_Reserva] ([dFechaEntrada], [dFechaSalida], [lCostoTotal], [sObservacion], [lHabitacion_iD_FK], [lCliente_iD_FK], [lEstado_iD_FK], [lCantidadAdultos], [lCantidadNinhos]) VALUES (@dFechaEntrada, @dFechaSalida, @lCostoTotal, @sObservacion, @lHabitacion_iD_FK, @lCliente_iD_FK, @lEstado_iD_FK, @lCantidadAdultos, @lCantidadNinhos);
+	
+SELECT lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos FROM Tbl_Reserva WHERE (lReserva_iD = SCOPE_IDENTITY())
+=======
+INSERT INTO [Tbl_Reserva] ([dFechaEntrada], [dFechaSalida], [lCostoTotal], [sObservacion], [lHabitacion_iD_FK], [lCliente_iD_FK], [lCantidadAdultos], [lCantidadNinhos]) VALUES (@dFechaEntrada, @dFechaSalida, @lCostoTotal, @sObservacion, @lHabitacion_iD_FK, @lCliente_iD_FK, @lCantidadAdultos, @lCantidadNinhos);
+	
+SELECT lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lCantidadAdultos, lCantidadNinhos  FROM Tbl_Reserva WHERE (lReserva_iD = SCOPE_IDENTITY())
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 GO
 
 IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_UpdateReserva' AND user_name(uid) = 'dbo')
@@ -47,7 +74,13 @@ CREATE PROCEDURE [dbo].sp_UpdateReserva
 	@sObservacion varchar(250),
 	@lHabitacion_iD_FK int,
 	@lCliente_iD_FK int,
+<<<<<<< HEAD
 	@lEstado_iD_FK int,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 	@lCantidadAdultos int,
 	@lCantidadNinhos int,
 	@Original_lReserva_iD int,
@@ -55,9 +88,21 @@ CREATE PROCEDURE [dbo].sp_UpdateReserva
 )
 AS
 	SET NOCOUNT OFF;
+<<<<<<< HEAD
 UPDATE [Tbl_Reserva] SET [dFechaEntrada] = @dFechaEntrada, [dFechaSalida] = @dFechaSalida, [lCostoTotal] = @lCostoTotal, [sObservacion] = @sObservacion, [lHabitacion_iD_FK] = @lHabitacion_iD_FK, [lCliente_iD_FK] = @lCliente_iD_FK, [lEstado_iD_FK] = @lEstado_iD_FK, [lCantidadAdultos] = @lCantidadAdultos, [lCantidadNinhos] = @lCantidadNinhos WHERE (([lReserva_iD] = @Original_lReserva_iD));
 	
 SELECT lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos FROM Tbl_Reserva WHERE (lReserva_iD = @lReserva_iD)
+=======
+<<<<<<< HEAD
+UPDATE [Tbl_Reserva] SET [dFechaEntrada] = @dFechaEntrada, [dFechaSalida] = @dFechaSalida, [lCostoTotal] = @lCostoTotal, [sObservacion] = @sObservacion, [lHabitacion_iD_FK] = @lHabitacion_iD_FK, [lCliente_iD_FK] = @lCliente_iD_FK, [lEstado_iD_FK] = @lEstado_iD_FK, [lCantidadAdultos] = @lCantidadAdultos, [lCantidadNinhos] = @lCantidadNinhos WHERE (([lReserva_iD] = @Original_lReserva_iD));
+	
+SELECT lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos FROM Tbl_Reserva WHERE (lReserva_iD = @lReserva_iD)
+=======
+UPDATE [Tbl_Reserva] SET [dFechaEntrada] = @dFechaEntrada, [dFechaSalida] = @dFechaSalida, [lCostoTotal] = @lCostoTotal, [sObservacion] = @sObservacion, [lHabitacion_iD_FK] = @lHabitacion_iD_FK, [lCliente_iD_FK] = @lCliente_iD_FK, [lCantidadAdultos] = @lCantidadAdultos, [lCantidadNinhos] = @lCantidadNinhos WHERE (([lReserva_iD] = @Original_lReserva_iD));
+	
+SELECT lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lCantidadAdultos, lCantidadNinhos FROM Tbl_Reserva WHERE (lReserva_iD = @lReserva_iD)
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 GO
 
 IF EXISTS (SELECT * FROM sysobjects WHERE name = 'sp_DeleteReserva' AND user_name(uid) = 'dbo')
@@ -83,11 +128,23 @@ CREATE PROCEDURE [dbo].sp_SelectReservaById
 )
 AS
 	SET NOCOUNT ON;
+<<<<<<< HEAD
 SELECT        lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos
+=======
+<<<<<<< HEAD
+SELECT        lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lEstado_iD_FK, lCantidadAdultos, lCantidadNinhos
+=======
+SELECT        lReserva_iD, dFechaEntrada, dFechaSalida, lCostoTotal, sObservacion, lHabitacion_iD_FK, lCliente_iD_FK, lCantidadAdultos, lCantidadNinhos
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 FROM            Tbl_Reserva
 WHERE        (lReserva_iD = @lReserva_iD)
 GO
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 44bfef7c874d394d5601a2e59fee3314a3fe6624
 
 
 
@@ -165,3 +222,5 @@ GO
 
 
 
+=======
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2

@@ -22,8 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /><!-- bootstrap bootstrap bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/><!-- letras 1 -->
     <link rel="stylesheet" type="text/css" href="css/fonts.css" /> <!-- letras -->
-    <link rel="stylesheet" href="css/pikaday.css"><!-- fecha cachorro -->
-    <link rel="stylesheet" href="css/site.css"><!-- fecha cachorro -->
+    <link rel="stylesheet" href="css/pikaday.css"/><!-- fecha cachorro -->
+    <link rel="stylesheet" href="css/site.css"/><!-- fecha cachorro -->
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -59,22 +59,12 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="HabitacionSimple.aspx">Habitación Simple</a></li>
                                 <li><a href="HabitacionDoble.aspx">Habitación Doble</a></li>
+                                <li><a href="HabitacionTriple.aspx">Habitación triple</a></li>
                                 <li><a href="HabitacionSuite.aspx">Habitación Suite</a></li>
                                 <li role="separator" class="divider"></li>
                             </ul>
                         </li>
-
-                        <li class="dropdown">
-                            <a href="Eventos.aspx" class="dropdown-toggle" data-toggle="dropdown">Eventos<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li role="separator" class="divider"></li>
-                                <li><a href="ESalonAuditorio.aspx">Salon Auditorio</a></li>
-                                <li><a href="EConvensiones.aspx">Convensiones</a></li>
-                                <li><a href="EReunionesSociales.aspx">Reuniones Sociales</a></li>
-                                <li><a href="EGaleria.aspx">Galeria</a></li>
-                                <li role="separator" class="divider"></li>
-                            </ul>
-                        </li>
+                        <li><a href="EReunionesSociales.aspx">Reuniones Sociales</a></li>
                         <li><a href="Gastronomia.aspx">Gastronomia</a></li>
                         <li><a href="Contactenos.aspx">Contactenos</a></li>
                     </ul>
@@ -110,8 +100,8 @@
     <div class="footer-left">
         <h3>Hotel<span>Nur</span></h3>
         <p class="footer-links">
-          <a href="Home.aspx">Inicio</a> · <a href="#">Sobre nosotros</a> · <a href="Habitacion.aspx">Habitaciones</a> · <a href="EReunionesSociales.aspx">Eventos</a>
-          · <a href="Contactenos.aspx">Comtactenos</a> · <a href="EGaleria.aspx">Galería</a> </p>
+          <a href="Home.aspx">Inicio</a> · <a href="Habitaciones.aspx">Habitaciones</a> · <a href="EReunionesSociales.aspx">Eventos</a>· <a href="Gastronomia.aspx">Gastronomia</a>
+          · <a href="Contactenos.aspx">Comtactenos</a> </p>
         <p class="footer-company-name">Estudiantes Nur &copy; 2016</p><br/>
         <p class="footer-company-name">Siguenos en</p>
         <div class="footer-icons">
@@ -150,15 +140,14 @@
 <div style="height:30px;width:100%; background-color:black; color:white; " > 
 
   <div class="Container"> 
-  <div class="row">
-    <div class="col-lg-3 col-md-4 col-ms-12 col-xs-12"> www.hotel.nur</div>
-    <div class="col-lg-4 col-md-4 col-ms-12 col-xs-12"> Alvaro paso por Aqui</div>
-    <div class="col-lg-4 col-md-4 col-ms-12 col-xs-12">
-          <div> 
-              <p>Idioma <a href="#">Ingles</a> - <a href="#">Frances</a> - <a href="#">Español</a>                <a href="#">Iniciar Seccion Admin</a></p>
-        </div>
-    </div>
-  </div>
+      <div class="row">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> .www.hotelNur.nur</div>
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> Alvaro paso por Aqui</div>
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> <p>Idioma <a href="#">Ingles</a> - <a href="#">Español</a> </p> </div>
+            <div class="col-lg-3 col-md-3 col-ms-12 col-xs-12"> <a href="Loging.aspx">Iniciar Seccion Admin</a></div>
+         </div>
+      </div>
   </div>
 
 </div>
@@ -178,15 +167,15 @@
     <script>
         $(function () {
 
-            $("#from").datepicker({
+            $(".from").datepicker({
                 onClose: function (selectedDate) {
-                    $("#to").datepicker("option", "minDate", selectedDate);
+                    $(".to").datepicker("option", "minDate", selectedDate);
                 }
             });
 
-            $("#to").datepicker({
+            $(".to").datepicker({
                 onClose: function (selectedDate) {
-                    $("#from").datepicker("option", "maxDate", selectedDate);
+                    $(".from").datepicker("option", "maxDate", selectedDate);
                 }
             });
 
@@ -210,6 +199,29 @@
             var picker = new Pikaday(
             {
                 field: document.getElementById('fechaFin'),
+                firstDay: 1,
+                minDate: new Date(),
+                maxDate: new Date(2020, 12, 31),
+                yearRange: [2000, 2020]
+            });
+        </script><!-- fecha cachorro -->
+
+
+    <script>
+        var picker = new Pikaday(
+        {
+            field: document.getElementById('fechaInicio1'),
+            firstDay: 1,
+            minDate: new Date(),
+            maxDate: new Date(2020, 12, 31),
+            yearRange: [2000, 2020]
+        });
+        </script><!-- fecha cachorro -->
+
+        <script>
+            var picker = new Pikaday(
+            {
+                field: document.getElementById('fechaFin1'),
                 firstDay: 1,
                 minDate: new Date(),
                 maxDate: new Date(2020, 12, 31),

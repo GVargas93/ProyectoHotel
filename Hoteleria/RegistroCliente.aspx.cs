@@ -22,6 +22,7 @@ public partial class RegistroCliente : System.Web.UI.Page
         }
         return ListDePaises;
     }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
