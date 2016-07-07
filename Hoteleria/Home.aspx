@@ -11,7 +11,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="img/z1.jpg" alt="New York" height="1200"/>
+                  <img src="img/z1.jpg" alt="New York" height="1200"/ >
                   <div class="carousel-caption">
                     <h3>UN POCO ACERCA DE NOSOTROS</h3>
                     <p>quipo profesional completamente equipado.
@@ -21,7 +21,7 @@
 
 
                 <div class="item">
-                  <img src="img/z2.jpg" alt="Chicago" height="1200"/>
+                  <img src="img/z2.jpg" alt="Chicago" height="1200"/  >
                   <div class="carousel-caption">
                     <h3>Nuestro objetivo es destacar nuestra obra</h3>
                     <p>pero no sólo hacemos eso.</p>
@@ -29,7 +29,7 @@
                 </div>
               
                 <div class="item">
-                  <img src="img/z3.jpg" alt="Chicago" height="1200"/>
+                  <img src="img/z3.jpg" alt="Chicago" height="1200"/  >
                   <div class="carousel-caption">
                     <h3>Heche un vistazo a lo que podemos hacer</h3>
                     <p>Por usted y su proyecto.</p>
@@ -37,7 +37,7 @@
                 </div>
             
                 <div class="item">
-                    <img src="img/z4.jpg" alt="Los Angeles" height="1200" />
+                    <img src="img/z4.jpg" alt="Los Angeles" height="1200" / >
                     <div class="carousel-caption">
                       <h3>Construimos el futuro.</h3>
                       <p>Llámenos hoy mismo. </p>
@@ -70,13 +70,13 @@
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="email" accesskey="E">E-mail <i class="fa fa-info-circle fa-lg"></i></label>
-                                <input id="email" name="email" type="email" class="form-control" placeholder="email@email.com" required=""   />
+                                <input id="email" name="email" type="email" class="form-control" placeholder="email@email.com" required="required" />
                                 <span class="help-block"></span>
                                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 ">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                             <div class="form-group">
                                 <label for="habitacion" accesskey="E">Habitación <i class="fa fa-info-circle fa-lg"></i></label>
                                 <br />
@@ -88,7 +88,7 @@
                                     <option value="4">Suite</option>
                                 </select>--%>
                                 <asp:DropDownList ID="habitacionescom" class="form-control warning" runat="server" >
-                                           <asp:ListItem Value="0">Seleccione una Habitación</asp:ListItem>
+                                           <asp:ListItem Value="0">Seleccione uno</asp:ListItem>
                                            <asp:ListItem Value="1">Simple</asp:ListItem>
                                            <asp:ListItem Value="2">Doble</asp:ListItem>
                                            <asp:ListItem Value="3">Triple</asp:ListItem>
@@ -110,7 +110,7 @@
                             </div>--%>
                             <div class="form-group">
                                <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                               <input type="text" id="fechaInicio" name="fechaInicio" placeholder="mm/dd/yyyy" required=""   /> 
+                               <input type="text" id="fechaInicio" name="fechaInicio" placeholder="mm/dd/yyyy" required="required"/> 
 <%--                               <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                 <i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>--%>
                                 <div class="form-group">
                                    <label for="fecha2" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                                   <input type="text" id="fechaFin" name="fechaFin" placeholder="mm/dd/yyyy" required=""   />
+                                   <input type="text" id="fechaFin" name="fechaFin" placeholder="mm/dd/yyyy" required="required"/>
 <%--                                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
                                 </div>
                         </div>
@@ -146,9 +146,10 @@
                             </div>
                         </div>--%>
 
-                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                        <div class="col-lg-offset-1 col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <br />
                             <br />
+
                            <asp:Button ID="BotonReserva" runat="server" Text="Reservar" class="btn btn-warning btn-block" onclick="BotonReserva_Click" />
                              <br />
                         </div>
@@ -259,10 +260,48 @@
           </div>
     </div>
 </div>
-    <br />
-    <br />
-    <br />
-    <br />
+<!-- ==================================== Habitaciones =============================================== -->
+<!-- ================================================================================================ -->
+<div id="" class="">
+  <div class="container">
+    <div class="row text-center">
+          <h3 class="text-center">Nuestras habitaciones</h3>
+
+      <div class="col-sm-4" id="simple">
+        <div class="thumbnail">
+          <br/>
+          <img src="img/habitacion1.png" alt="habitacion simple" width="400" height="300"/>
+          <br/>
+          <p class="textoNegro">Habitacion Simple</p>
+          <h2>$ 160</h2>
+          <a href="HabitacionSimple.aspx" type="submit" class="btn btn-default btn-block">Hacer Reserva </a>
+        </div>
+      </div>
+
+      <div class="col-sm-4" id="doble">
+        <div class="thumbnail">
+          <br/>
+          <img src="img/habitacion2.png" alt="habitacion doble" width="400" height="300"/>
+          <br/>
+          <p class="textoNegro">Habitacion Doble</p>
+          <h2>$ 300</h2>
+          <a href="HabitacionDoble.aspx" type="submit" class="btn btn-default btn-block">Hacer Reserva </a>
+        </div>
+      </div>
+
+      <div class="col-sm-4  " id="suite">
+        <div class="thumbnail">
+          <br/>
+          <img src="img/habitacion3.png" alt="Suite" width="400" height="300"/>
+          <br/>
+          <p class="textoNegro">Habitacion Suite</p>
+          <h2>$ 420</h2>
+          <a href="HabitacionSuite.aspx" type="submit" class="btn btn-default btn-block">Hacer Reserva </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- ================================================================================================ -->
 <!-- ==================================== COntactenos =============================================== -->
 <section class="frase">

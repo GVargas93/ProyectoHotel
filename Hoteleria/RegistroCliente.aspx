@@ -96,23 +96,8 @@
 
             <asp:HiddenField ID="TipoHabitacionIdHiddenField" runat="server"
                 Value="0" />
-            <br />
-            <br />
-            <asp:GridView ID="GridCliente" PageSize="10" runat="server" AutoGenerateColumns="False" DataKeyNames="lCliente_iD" DataSourceID="sdsCliente" AllowPaging="True">
-            <Columns>
-                <asp:BoundField DataField="sNombre" HeaderText="Nombre" SortExpression="sNombre"></asp:BoundField>
-                <asp:BoundField DataField="sApellido" HeaderText="Apellido" SortExpression="sApellido"></asp:BoundField>
-                <asp:BoundField DataField="sDireccion" HeaderText="Direccion" SortExpression="sDireccion"></asp:BoundField>
-                <asp:BoundField DataField="sTelefono" HeaderText="Telefono" SortExpression="sTelefono"></asp:BoundField>
-                <asp:BoundField DataField="sDocumento" HeaderText="Documento" SortExpression="sDocumento"></asp:BoundField>
-                <asp:BoundField DataField="sPais" HeaderText="Pais" SortExpression="sPais"></asp:BoundField>
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource runat="server" ID="sdsCliente" ConnectionString='<%$ ConnectionStrings:DB_HotelConnectionString %>' 
-            SelectCommand="SELECT [lCliente_iD], [sNombre], [sApellido], [sDireccion], [sTelefono], [sDocumento], [sPais] FROM [Tbl_Cliente]"></asp:SqlDataSource>
-        </div>
 
-        
+        </div>
     </section>
 </asp:Content>
 
