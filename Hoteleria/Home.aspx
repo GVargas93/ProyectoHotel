@@ -11,7 +11,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="img/z1.jpg" alt="New York" height="1200"/ >
+                  <img src="img/z1.jpg" alt="New York" height="1200"/>
                   <div class="carousel-caption">
                     <h3>UN POCO ACERCA DE NOSOTROS</h3>
                     <p>quipo profesional completamente equipado.
@@ -21,7 +21,7 @@
 
 
                 <div class="item">
-                  <img src="img/z2.jpg" alt="Chicago" height="1200"/  >
+                  <img src="img/z2.jpg" alt="Chicago" height="1200"/>
                   <div class="carousel-caption">
                     <h3>Nuestro objetivo es destacar nuestra obra</h3>
                     <p>pero no sólo hacemos eso.</p>
@@ -29,7 +29,7 @@
                 </div>
               
                 <div class="item">
-                  <img src="img/z3.jpg" alt="Chicago" height="1200"/  >
+                  <img src="img/z3.jpg" alt="Chicago" height="1200"/>
                   <div class="carousel-caption">
                     <h3>Heche un vistazo a lo que podemos hacer</h3>
                     <p>Por usted y su proyecto.</p>
@@ -37,7 +37,7 @@
                 </div>
             
                 <div class="item">
-                    <img src="img/z4.jpg" alt="Los Angeles" height="1200" / >
+                    <img src="img/z4.jpg" alt="Los Angeles" height="1200" />
                     <div class="carousel-caption">
                       <h3>Construimos el futuro.</h3>
                       <p>Llámenos hoy mismo. </p>

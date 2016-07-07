@@ -3,59 +3,107 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <br />
+    <br />
+    <br />
+    <br />
     <section class="row">
         <div class="col-md-6">
             <div>
                 <asp:Label ID="lblFechaEntrada" runat="server" Text="Fecha de Entrada"></asp:Label>
             </div>
             <div>
-                <asp:Calendar ID="Fecha_entrada" runat="server"></asp:Calendar>
+                <asp:TextBox ID="txtFechaSalida" runat="server" CssClass="form-control" placeholder="Fecha de Salida"> </asp:TextBox>
+                <script type="text/javascript">
+                    var picker = new Pikaday(
+                        {
+                            field: document.getElementById('<%= txtFechaSalida.ClientID %>'),
+                            firstDay: 1,
+                            minDate: new Date('2000-01-01'),
+                            maxDate: new Date('2020-01-01'),
+                            yearRange: [2000, 2020],
+                            numberOfMonths: 1,
+                            theme: 'dark-theme'
+                        });
+                </script>
             </div>
             <div>
                 <asp:Label ID="lblFechaSalida" runat="server" Text="Fecha Final"></asp:Label>
             </div>
             <div>
 
-                <asp:Calendar ID="Fecha_final" runat="server"></asp:Calendar>
+                <asp:TextBox ID="txtFechaEntrada" runat="server" CssClass="form-control" placeholder="Fecha de Salida"> </asp:TextBox>
+                <script type="text/javascript">
+                    var picker = new Pikaday(
+                        {
+                            field: document.getElementById('<%= txtFechaEntrada.ClientID %>'),
+                            firstDay: 1,
+                            minDate: new Date('2000-01-01'),
+                            maxDate: new Date('2020-01-01'),
+                            yearRange: [2000, 2020],
+                            numberOfMonths: 1,
+                            theme: 'dark-theme'
+                        });
+                </script>
             </div>
             <div>
-                <asp:Label ID="Label3" runat="server" Text="Costo Total"></asp:Label>
+                <asp:Label ID="lblCosto" runat="server" Text="Costo Total"></asp:Label>
             </div>
             <div>
-                <asp:TextBox ID="Costo" CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtCosto" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="Label4" runat="server" Text="Observacion"></asp:Label>
+                <asp:Label ID="lblObservacion" runat="server" Text="Observacion"></asp:Label>
             </div>
             <div>
-                <asp:TextBox ID="Observacion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtObservacion" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="Label5" runat="server" Text="Habitacion"></asp:Label>
+                <asp:Label ID="lblHabitacion" runat="server" Text="Habitacion"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="Habitacion" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlHabitacion" runat="server"></asp:DropDownList>
 
             </div>
             <div>
-                <asp:Label ID="Label7" runat="server" Text="Adulto"></asp:Label>
+                <asp:Label ID="lblAdulto" runat="server" Text="Adulto"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlAdulto" runat="server">
+                    <asp:ListItem Text="1" />
+                    <asp:ListItem Text="2" />
+                    <asp:ListItem Text="3" />
+                    <asp:ListItem Text="4" />
+                    <asp:ListItem Text="5" />
+                    <asp:ListItem Text="6" />
+                    <asp:ListItem Text="7" />
+                    <asp:ListItem Text="8" />
+                    <asp:ListItem Text="9" />
+                </asp:DropDownList>
 
             </div>
             <div>
-                <asp:Label ID="Label8" runat="server" Text="Niños"></asp:Label>
+                <asp:Label ID="lblNinhos" runat="server" Text="Niños"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlNinhos" runat="server">
+                    <asp:ListItem Text="1" />
+                    <asp:ListItem Text="2" />
+                    <asp:ListItem Text="3" />
+                    <asp:ListItem Text="4" />
+                    <asp:ListItem Text="5" />
+                    <asp:ListItem Text="6" />
+                    <asp:ListItem Text="7" />
+                    <asp:ListItem Text="8" />
+                    <asp:ListItem Text="9" />
+                </asp:DropDownList>
 
             </div>
             <div>
-                <asp:Label ID="Label6" runat="server" Text="Cliente"></asp:Label>
+                <asp:Label ID="lblCliente" runat="server" Text="Cliente"></asp:Label>
             </div>
             <div>
-                <asp:DropDownList ID="Cliente" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlCliente" runat="server"></asp:DropDownList>
 
             </div>
             <asp:LinkButton ID="SaveButtonn" runat="server"
