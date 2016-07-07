@@ -37,8 +37,12 @@ public class ReservaBLL
         objReserva.Observacion = row.sObservacion;
         objReserva.HabitacionFK = row.lHabitacion_iD_FK;
         objReserva.ClienteFK = row.lCliente_iD_FK;
+<<<<<<< HEAD
         objReserva.EstadoFK = row.lEstado_iD_FK;
         objReserva.CantidadAdulto = row.lCantidadAdultos;
+=======
+        objReserva.CantidadAdultos = row.lCantidadAdultos;
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
         objReserva.CantidadNinhos = row.lCantidadNinhos;
 
         return objReserva;
@@ -56,6 +60,7 @@ public class ReservaBLL
 
     }
 
+<<<<<<< HEAD
     public static void Insert(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int EstadoFK, int CantidadAdultos, int CantidadNinhos)
     {
         tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
@@ -66,6 +71,18 @@ public class ReservaBLL
     {
         tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
         ReservaAdapter.Update(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, EstadoFK, CantidadAdultos, CantidadNinhos, ReservaID);
+=======
+    public static void Insert(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int CantidadAdultos, int CantidadNinhos)
+    {
+        tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
+        ReservaAdapter.Insert(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, CantidadAdultos, CantidadNinhos);
+    }
+
+    public static void Update(DateTime FechaEntrada, DateTime FechaSalida, int CostoTotal, string Observacion, int HabitacionFK, int ClienteFK, int CantidadAdultos, int CantidadNinhos, int ReservaID)
+    {
+        tblReservaDSTableAdapters.Tbl_ReservaTableAdapter ReservaAdapter = new tblReservaDSTableAdapters.Tbl_ReservaTableAdapter();
+        ReservaAdapter.Update(FechaEntrada, FechaSalida, CostoTotal, Observacion, HabitacionFK, ClienteFK, CantidadAdultos, CantidadNinhos, ReservaID);
+>>>>>>> 360ecd1cfd6779b8a1df6b6914138dd5708c1ea2
     }
 
     public static void Delete(int Reserva_ID)

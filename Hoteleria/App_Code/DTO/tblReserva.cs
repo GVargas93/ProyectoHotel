@@ -29,7 +29,9 @@ public class tblReserva
 
     public int ClienteFK { get; set; }
 
-    public int EstadoFK { get; set; }
+    public int CantidadAdultos { get; set; }
+
+    public int CantidadNinhos { get; set; }
 
     public int CantidadAdulto { get; set; }
 

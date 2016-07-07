@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraCliente.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraCliente.master" AutoEventWireup="true" CodeFile="HomePrueba.aspx.cs" Inherits="HomePrueba" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
 <!-- ====================================    slider    ============================================== -->
 <!-- ================================================================================================ -->
   <div class="">    
@@ -11,7 +11,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <img src="img/z1.jpg" alt="New York" height="1200"/>
+                  <img src="img/z1.jpg" alt="New York" height="1200"/ >
                   <div class="carousel-caption">
                     <h3>UN POCO ACERCA DE NOSOTROS</h3>
                     <p>quipo profesional completamente equipado.
@@ -21,7 +21,7 @@
 
 
                 <div class="item">
-                  <img src="img/z2.jpg" alt="Chicago" height="1200"/>
+                  <img src="img/z2.jpg" alt="Chicago" height="1200"/  >
                   <div class="carousel-caption">
                     <h3>Nuestro objetivo es destacar nuestra obra</h3>
                     <p>pero no sólo hacemos eso.</p>
@@ -29,7 +29,7 @@
                 </div>
               
                 <div class="item">
-                  <img src="img/z3.jpg" alt="Chicago" height="1200"/>
+                  <img src="img/z3.jpg" alt="Chicago" height="1200"/  >
                   <div class="carousel-caption">
                     <h3>Heche un vistazo a lo que podemos hacer</h3>
                     <p>Por usted y su proyecto.</p>
@@ -37,7 +37,7 @@
                 </div>
             
                 <div class="item">
-                    <img src="img/z4.jpg" alt="Los Angeles" height="1200" />
+                    <img src="img/z4.jpg" alt="Los Angeles" height="1200" / >
                     <div class="carousel-caption">
                       <h3>Construimos el futuro.</h3>
                       <p>Llámenos hoy mismo. </p>
@@ -64,95 +64,117 @@
         <div class="container">
             <div class="row colorT  bordeando">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 res-z-index">
-
+                    <br />
                     <div class="row">
 
-                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+                        <div class="col-lg-2">
                             <div class="form-group">
-                                <label for="email" accesskey="E">E-mail <i class="fa fa-info-circle fa-lg"></i></label>
-                                <input id="email" name="email" type="email" class="form-control" placeholder="email@email.com" required=""   />
+                                <label for="email" accesskey="E"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail</label>
+                                <asp:TextBox ID="emailTextBox" type="email" runat="server" CssClass="form-control" placeholder="email@email.com" required="required"></asp:TextBox>
                                 <span class="help-block"></span>
-                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 ">
+
+                        <div class="col-lg-2 ">
                             <div class="form-group">
-                                <label for="habitacion" accesskey="E">Habitación <i class="fa fa-info-circle fa-lg"></i></label>
+                                <label for="fechaInicio" accesskey="E"><i class="fa fa-info-circle fa-lg"></i>Fecha Inicio </label>
+                                <asp:TextBox ID="fechaInicioTextBox"  CssClass="from form-control"  name="fechaInicioTextBox" placeholder="mm/dd/yyyy" runat="server" required="required"> </asp:TextBox>
+
+                            </div>
+                                
+                        </div>
+
+                        <div class="col-lg-2 ">
+                            <div class="form-group">
+                                <label for="fechaFin" accesskey="E"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Fecha Fin </label>
+                                <asp:TextBox ID="fechaFinTextBox"  CssClass="to form-control"  name="fechaFinTextBox" placeholder="mm/dd/yyyy" runat="server" required="required"> </asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 ">
+                            <div class="form-group">
+                                <label for="habitacion" accesskey="E"><i class="fa fa-bed" aria-hidden="true"></i> Habitación </label>
                                 <br />
-<%--                                <select id="ciudad" name="ciudad" class="form-control" required>
-                                    <option value="">Seleccione uno</option>
-                                    <option value="1">Simple</option>
-                                    <option value="2">Doble</option>
-                                    <option value="3">Triple</option>
-                                    <option value="4">Suite</option>
-                                </select>--%>
-                                <asp:DropDownList ID="habitacionescom" class="form-control warning" runat="server" >
-                                           <asp:ListItem Value="0">Seleccione una Habitación</asp:ListItem>
-                                           <asp:ListItem Value="1">Simple</asp:ListItem>
-                                           <asp:ListItem Value="2">Doble</asp:ListItem>
-                                           <asp:ListItem Value="3">Triple</asp:ListItem>
-                                           <asp:ListItem Value="4">Suite</asp:ListItem>
-                                  </asp:DropDownList>
-                                <span class="help-block"></span>
-                                <i class="fa fa-bed" aria-hidden="true"></i>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <%--<div class="form-group">
-                               <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                               <input type="text" id="from" name="from" placeholder="mm/dd/yyyy" required="required"/> <span class="help-block warning"></span>
-                                <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                            </div>--%>
-                            <div class="form-group">
-                               <label for="fecha1" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                               <input type="text" id="fechaInicio" name="fechaInicio" placeholder="mm/dd/yyyy" required=""   /> 
-<%--                               <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                           <%-- <div class="form-group">
-                                <label for="fecha2" accesskey="E">Fecha Fin <i class="fa fa-info-circle fa-lg"></i></label>
-                               <input type="text" id="to" name="to" placeholder="mm/dd/yyyy" required="required"/> <span class="help-block"></span>
-                                <i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>--%>
-                                <div class="form-group">
-                                   <label for="fecha2" accesskey="E">Fecha Incio <i class="fa fa-info-circle fa-lg"></i></label>
-                                   <input type="text" id="fechaFin" name="fechaFin" placeholder="mm/dd/yyyy" required=""   />
-<%--                                   <i class="fa fa-calendar-check-o" aria-hidden="true"></i>--%>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                <asp:DropDownList ID="DropDownListHabitacion" runat="server" class="form-control">
+                                            <asp:ListItem Text="Simple" />
+                                            <asp:ListItem Text="Doble" />
+                                            <asp:ListItem Text="Triple" />
+                                            <asp:ListItem Text="Suite" />
+                                </asp:DropDownList>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="col-lg-7">
+                                <asp:DropDownList ID="DropDownListHabitacionCantidad" runat="server" class="form-control">
+                                            <asp:ListItem Text="1" />
+                                            <asp:ListItem Text="2" />
+                                            <asp:ListItem Text="3" />
+                                            <asp:ListItem Text="4" />
+                                            <asp:ListItem Text="5" />
+                                            <asp:ListItem Text="6" />
+                                            <asp:ListItem Text="7" />
+                                            <asp:ListItem Text="8" />
+                                            <asp:ListItem Text="9" />
+                                            <asp:ListItem Text="10" />
+                                </asp:DropDownList>
+                                    </div>
                                 </div>
-                        </div>
-
-                        <%--<div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
-                            <div class="form-group">
-                                <label for="persona" accesskey="E">Persona  </label>
-                                <select id="ciudad" name="ciudad" class="form-control" required="required">
-                                    <option value="">-----</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                </select>
-                                <span class="help-block"></span>
-                                <i class="fa fa-user infield"></i>
                             </div>
-                        </div>--%>
+                       </div>
 
-                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+
+                     <div class="col-lg-1  ">
+                         <div class="form-group">
+                                <label for="psw1"><span class="glyphicon glyphicon-user"></span>Adultos</label>
+                                <asp:DropDownList ID="DropDownListAdulto" runat="server" class="form-control">
+                                    <asp:ListItem Text="1" />
+                                    <asp:ListItem Text="2" />
+                                    <asp:ListItem Text="3" />
+                                    <asp:ListItem Text="4" />
+                                    <asp:ListItem Text="5" />
+                                    <asp:ListItem Text="6" />
+                                    <asp:ListItem Text="7" />
+                                    <asp:ListItem Text="8" />
+                                    <asp:ListItem Text="9" />
+                                    <asp:ListItem Text="10" />
+                                </asp:DropDownList>
+                            </div>
+                       </div>
+
+
+                      <div class="col-lg-1  ">
+                            <div class="form-group">
+                                <label for="psw2"><span class="glyphicon glyphicon-user"></span>Niños</label>
+                                <asp:DropDownList ID="DropDownListNiños" runat="server" class="form-control">
+                                    <asp:ListItem Text="1" />
+                                    <asp:ListItem Text="2" />
+                                    <asp:ListItem Text="3" />
+                                    <asp:ListItem Text="4" />
+                                    <asp:ListItem Text="5" />
+                                    <asp:ListItem Text="6" />
+                                    <asp:ListItem Text="7" />
+                                    <asp:ListItem Text="8" />
+                                    <asp:ListItem Text="9" />
+                                    <asp:ListItem Text="10" />
+                                </asp:DropDownList>
+                            </div>
+                       </div>
+
+ 
+                        <div class=" col-lg-2">
                             <br />
-                            <br />
-                           <asp:Button ID="BotonReserva" runat="server" Text="Reservar" class="btn btn-warning btn-block" onclick="BotonReserva_Click" />
+                           <asp:Button ID="BotonReserva" runat="server" Text="Reservar" class="btn btn-warning btn-block"  OnClick="BotonReserva_Click"  />
                              <br />
                         </div>
+
+
                     </div>
+                    <asp:Label ID="lbmensaje" runat="server" BackColor="White" ForeColor="Red"></asp:Label>
+
                 </div>
             </div>
         </div>

@@ -35,7 +35,6 @@
 
         <div class="col-sm-6 form-group">           
              <asp:TextBox ID="Nombre" runat="server" placeholder="Nombre"  CssClass="form-control" ></asp:TextBox>
-
             <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="Nombre"
                     Display="Dynamic"
@@ -50,7 +49,6 @@
 
         <div class="col-sm-6 form-group">
             <asp:TextBox ID="Correo" runat="server" CssClass="form-control" name="email" placeholder="Email" type="email"> </asp:TextBox>
-
             <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="Correo"
                     Display="Dynamic"
@@ -65,7 +63,7 @@
 
 
 
-      <br>
+      <br/>
       <div class="row">
         <div class="col-md-12 form-group">
 
@@ -79,6 +77,7 @@
             <asp:Label ID="lbmensaje" runat="server" BackColor="White" ForeColor="Red"></asp:Label>
         </div>
       </div>
+
     </div>
   </div>
 </div>
