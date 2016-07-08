@@ -36,5 +36,12 @@ public partial class RegistroCliente : System.Web.UI.Page
     {
         tblClientes cliente = new tblClientes();
         ClienteBLL.Insert(nombreTextBox.Text, apellido.Text, Direccion.Text, Telefono.Text, Documentacion.Text, Paises.SelectedValue);
+
+        Response.Redirect("RegistroCliente.aspx");
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ListaCliente.aspx");
     }
 }

@@ -1,76 +1,85 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestraAdministrador.master" AutoEventWireup="true" CodeFile="RegistroHabitacion.aspx.cs" Inherits="RegistroHabitacion" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    <section class="row">
-        <div class="col-md-6">
-            <asp:panel id="ErrorPanel" runat="server" visible="false"
-                cssclass="alert alert-danger" role="alert">
-                Error al Guardar el tipo de Habitacion
-            </asp:panel>
-
-            <br /><br />
-            <div class="form-group">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
                 <label>Numero Habitacion</label>
-                <asp:textbox id="nombreTextBox" runat="server" cssclass="form-control"></asp:textbox>
-                <asp:requiredfieldvalidator runat="server"
-                    controltovalidate="nombreTextBox"
-                    display="Dynamic"
-                    forecolor="Red"
-                    validationgroup="tipoHabitacion"
-                    errormessage="Debe ingresar el nombre">
-                </asp:requiredfieldvalidator>
-            </div>
-            <div>
+                <asp:TextBox ID="nombreTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server"
+                    ControlToValidate="nombreTextBox"
+                    Display="Dynamic"
+                    ForeColor="Red"
+                    ValidationGroup="tipoHabitacion"
+                    ErrorMessage="Debe ingresar el nombre">
+                </asp:RequiredFieldValidator>
+                <label>Estado</label><br />
+                <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
 
-                <asp:label runat="server" ID="ddlestado" text="Estado"></asp:label>
-                <asp:DropDownList ID="DropDownList1" runat="server">
-                    
-                    <asp:ListItem Text="No Disponible" value="1"/>
-                    <asp:ListItem Text="Disponible" value="0"/>
+                    <asp:ListItem Text="No Disponible" Value="1" />
+                    <asp:ListItem Text="Disponible" Value="0" />
 
-                </asp:DropDownList>
-              
-            </div>
+                </asp:DropDownList><br />
 
-            <div class="form-group">
                 <label>Costo</label>
-                <asp:textbox id="apellido" runat="server" cssclass="form-control"></asp:textbox>
-                <asp:requiredfieldvalidator runat="server"
-                    controltovalidate="apellido"
-                    display="Dynamic"
-                    forecolor="Red"
-                    validationgroup="tblClientes"
-                    errormessage="Debe ingresar el apellido">
-                </asp:requiredfieldvalidator>
-            </div>
+                <asp:TextBox ID="apellido" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server"
+                    ControlToValidate="apellido"
+                    Display="Dynamic"
+                    ForeColor="Red"
+                    ValidationGroup="tblClientes"
+                    ErrorMessage="Debe ingresar el apellido">
+                </asp:RequiredFieldValidator>
 
-            <div class="form-group">
                 <label>Descripcion</label>
-                <asp:textbox id="Direccion" runat="server" cssclass="form-control"></asp:textbox>
-                <asp:requiredfieldvalidator runat="server"
-                    controltovalidate="Direccion"
-                    display="Dynamic"
-                    forecolor="Red"
-                    validationgroup="tblClientes"
-                    errormessage="Debe ingresar el Direccion">
-                </asp:requiredfieldvalidator>
+                <asp:TextBox ID="Direccion" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server"
+                    ControlToValidate="Direccion"
+                    Display="Dynamic"
+                    ForeColor="Red"
+                    ValidationGroup="tblClientes"
+                    ErrorMessage="Debe ingresar el Direccion">
+                </asp:RequiredFieldValidator>
+
+                <label>Tipo Habitacion</label><br />
+                <asp:DropDownList ID="tipo" runat="server" CssClass="form-control" DataSourceID="SqlDataSource2" DataTextField="sNombre" DataValueField="lTipoHabitacion_iD" Style="margin-left: 0px"></asp:DropDownList><br />
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DB_HotelConnectionString %>" SelectCommand="SELECT [sNombre], [lTipoHabitacion_iD] FROM [Tbl_TipoHabitacion]"></asp:SqlDataSource>
+
+
+
+                <br />
+
+
+                <asp:LinkButton ID="SaveButtonn" runat="server"
+                    CssClass="btn btn-primary"
+                    ValidationGroup="tipoHabitacion"
+                    OnClick="SaveButtonn_Click">
+                Guardar
+                </asp:LinkButton>
+                <asp:HyperLink runat="server" CssClass="btn"
+                    NavigateUrl="~/ListaTipoHabitacion.aspx">
+                Cancelar
+                </asp:HyperLink>
+
+                <asp:HiddenField ID="TipoHabitacionIdHiddenField" runat="server"
+                    Value="0" />
             </div>
-
-         
-
-
-
-            <div>
-
-                <asp:label runat="server" text="Tipo Habitacion "></asp:label>
-                <asp:dropdownlist id="tipo" runat="server" height="16px" width="145px" datasourceid="SqlDataSource2" datatextfield="sNombre" datavaluefield="lTipoHabitacion_iD" style="margin-left: 0px"></asp:dropdownlist>
-                <asp:sqldatasource id="SqlDataSource2" runat="server" connectionstring="<%$ ConnectionStrings:DB_HotelConnectionString %>" selectcommand="SELECT [sNombre], [lTipoHabitacion_iD] FROM [Tbl_TipoHabitacion]"></asp:sqldatasource>
-            </div>
-          
-             <div class="col-md-12">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <asp:GridView ID="ClienteGridView" runat="server"
                     CssClass="table" GridLines="None"
                     AutoGenerateColumns="false"
@@ -81,7 +90,7 @@
                                 <asp:LinkButton ID="EditButton" runat="server" CommandName="Editar"
                                     CommandArgument='<%# Eval("HabitacionID") %>'>
                                 <i class="glyphicon glyphicon-pencil"></i>
-                            </asp:LinkButton>
+                                </asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Eliminar">
@@ -89,7 +98,7 @@
                                 <asp:LinkButton ID="DeleteButton" runat="server" CommandName="Eliminar"
                                     CommandArgument='<%# Eval("HabitacionID") %>'>
                                 <i class="glyphicon glyphicon-remove"></i>
-                            </asp:LinkButton>
+                                </asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="NumeroHabitacion" HeaderText="Numero Habitacion" />
@@ -101,27 +110,8 @@
 
                 </asp:GridView>
             </div>
-
-
-            <br />
-
-
-            <asp:linkbutton id="SaveButtonn" runat="server"
-                cssclass="btn btn-primary"
-                validationgroup="tipoHabitacion"
-                onclick="SaveButtonn_Click">
-                Guardar
-            </asp:linkbutton>
-            <asp:hyperlink runat="server" cssclass="btn"
-                navigateurl="~/ListaTipoHabitacion.aspx">
-                Cancelar
-            </asp:hyperlink>
-
-            <asp:hiddenfield id="TipoHabitacionIdHiddenField" runat="server"
-                value="0" />
-
         </div>
-    </section>
+    </div>
 
 </asp:Content>
 

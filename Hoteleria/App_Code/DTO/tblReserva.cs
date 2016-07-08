@@ -8,12 +8,13 @@ using System.Web;
 /// </summary>
 public class tblReserva
 {
-	public tblReserva()
-	{
-		//
-		// TODO: Agregar aquí la lógica del constructor
-		//
-	}
+    public tblReserva()
+    {
+        //
+        // TODO: Agregar aquí la lógica del constructor
+        //
+    }
+
 
     public int ReservaID { get; set; }
 
@@ -29,6 +30,8 @@ public class tblReserva
 
     public int ClienteFK { get; set; }
 
-    public int EstadoFK { get; set; }
+    public int CantidadAdultos { get; set; }
+
+    public int CantidadNinhos { get; set; }
 
 }

@@ -22,8 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /><!-- bootstrap bootstrap bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/><!-- letras 1 -->
     <link rel="stylesheet" type="text/css" href="css/fonts.css" /> <!-- letras -->
-    <link rel="stylesheet" href="css/pikaday.css"><!-- fecha cachorro -->
-    <link rel="stylesheet" href="css/site.css"><!-- fecha cachorro -->
+    <link rel="stylesheet" href="css/pikaday.css"/><!-- fecha cachorro -->
+    <link rel="stylesheet" href="css/site.css"/><!-- fecha cachorro -->
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -164,6 +164,7 @@
 </div>
     <!-- ===================================== footer fin ========================================== -->
     <!-- =========================================================================================== -->
+
 
 
 
