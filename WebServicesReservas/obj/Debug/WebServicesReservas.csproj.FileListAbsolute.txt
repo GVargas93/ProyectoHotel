@@ -1,0 +1,5 @@
+C:\Users\Alvaro\Desktop\Hotel Github\WebServicesReservas\bin\WebServicesReservas.dll.config
+C:\Users\Alvaro\Desktop\Hotel Github\WebServicesReservas\bin\WebServicesReservas.dll
+C:\Users\Alvaro\Desktop\Hotel Github\WebServicesReservas\bin\WebServicesReservas.pdb
+C:\Users\Alvaro\Desktop\Hotel Github\WebServicesReservas\obj\Debug\WebServicesReservas.dll
+C:\Users\Alvaro\Desktop\Hotel Github\WebServicesReservas\obj\Debug\WebServicesReservas.pdb
